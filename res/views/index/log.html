@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="./res/css/index/log.css">
+<div class="layui-fluid">
+	<div class="robotManager">
+		<div class="m">
+			<div class="order">
+				<div class="orderLeft">
+					<span class="t1"><a href="javascript:void(0)"></a></span>
+					<span class="t">&nbsp;/&nbsp;</span>
+					<span class="t2"><a href="javascript:void(0)">日志</a></span>
+				</div>
+				<div class="orderRight">
+					<p>
+						<a href="https://www.kancloud.cn/yuanls/dialog/687546" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a>
+					</p>
+				</div>
+			</div>
+			<p class="m_title m_name">日志</p>
+			<!--<p class="m_search">
+				<input id="key" type="text" name="name" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+				<i class="layui-icon" id="searchBtn" data-type="reload">&#xe615;</i>
+			</p>-->
+			<div class="logSearchDiv">
+				<div class="layui-form-item">
+					<div class="layui-inline">
+						<label class="layui-form-label">人说</label>
+						<div class="layui-input-inline">
+							<input name="person" autocomplete="off" class="layui-input person" type="text">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">机器说</label>
+						<div class="layui-input-inline">
+							<input name="robot" autocomplete="off" class="layui-input robot" type="text">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">终端ip</label>
+						<div class="layui-input-inline">
+							<input name="ip" autocomplete="off" class="layui-input ip" type="text">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">城市</label>
+						<div class="layui-input-inline">
+							<input name="city" autocomplete="off" class="layui-input city" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">是否命中</label>
+					<form class="layui-form formIsFind" action="" style="display: inline-block;">					
+						
+						<select name="themeState" lay-verify="">
+							<option value="" selected>全部</option>
+							<option value="1">命中</option>
+							<option value="0">未命中</option>
+						</select>
+					
+					</form>
+					<div class="layui-inline">
+						<label class="layui-form-label">开始时间</label>
+						<div class="layui-input-inline">
+							<input name="start_date" id="start_date" lay-verify="date1" placeholder="yyyy-MM-dd hh:mm:ss" autocomplete="off" class="layui-input start_date" type="text">
+						</div>
+					</div>
+					<div class="layui-inline">
+						<label class="layui-form-label">结束时间</label>
+						<div class="layui-input-inline">
+							<input name="end_date" id="end_date" lay-verify="date2" placeholder="yyyy-MM-dd hh:mm:ss" autocomplete="off" class="layui-input end_date" type="text">
+						</div>
+					</div>
+					<button type="button" class="layui-btn searchBtn">搜索</button>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" class="s_date">
+		<input type="hidden" class="e_date">
+		<div class="m_bg">
+			<table id="logTable" lay-filter="interfaceDemo"></table>
+			<div id="logPage"></div>
+		</div>
+	</div>
+</div>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/index/log.js"></script>

@@ -1,0 +1,509 @@
+
+div.order1, div.orderInfo {
+    position: relative;
+    margin: 20px auto;
+    width: 97%;
+}
+div.secondOrder , div.content_normal , div.dialog{
+    position: relative;
+    margin: 20px auto;
+    width: 97%;
+    background: #fff;
+    box-shadow: 2px 2px 10px 1px #ece9e9;
+    padding: 10px;
+    box-sizing: border-box;
+}
+div.secondOrder{
+	 white-space:nowrap; 
+}
+div.order span.t2>a{
+	color:#333
+}
+div.secondOrder ul{
+	list-style: none;
+}
+div.secondOrder ul:after , div.order1:after{
+	clear:both;
+	content:'';
+	display:block;
+	width:0;
+	height:0;
+	visibility:hidden; 
+	zoom:1
+}
+div.secondOrder ul li{
+	height:100px;
+	background-color:rgb(222,236,253);
+	width: 160px;
+	float:left;
+	text-align: center;
+	margin-right:10px;
+	line-height: 100px;
+	cursor:pointer;
+	position:relative;
+	margin: 5px;
+}
+div.secondOrder ul li>img{
+	position:absolute;
+	top:-5px;
+	right:0px;
+	display: none;
+}
+div.secondOrder ul li.active{
+	background-color:rgb(24,117,240);
+	color:#fff;
+	    
+}
+div.secondOrder ul li:hover{
+	background-color:rgb(24,117,240);
+	color:#fff;
+}
+div.secondOrder ul li.addBtn{
+	background-color:#fff;
+	color:rgb(24,117,240);
+	font-size:18px;
+	border:1px solid #dcdcdc;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+div.answerDiv , div.iconDiv ,  div.abilityDiv{
+	margin:20px 10px
+}
+div.answerDiv .layui-form-label{
+	width:auto
+}
+div.answerDiv .layui-input{
+    width: 30%;
+    border:none;
+    float: left;
+}
+div.answerDiv input.borderActive{
+	border:1px solid #eaeaea
+}
+div.answerDiv .layui-input-block {
+    margin-left: 110px;
+    min-height: 36px;
+    margin: 20px;
+}
+div.layui-input-block>a{
+	float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+    color: rgb(24,117,240);
+}
+input[name="none"]{
+	margin-left: 13px;
+
+}
+input[name="catch"]{
+	
+}
+div.iconDiv ,div.abilityDiv{
+	padding:0px 20px
+}
+div.iconDiv .layui-btn , div.abilityDiv .layui-btn{
+    background-color: rgb(24,117,240);
+}
+div.iconDiv .layui-upload-img {
+    width: 92px;
+    height: 92px;
+    margin: 0 20px 10px 0;
+}
+div.iconDiv .layui-upload-list {
+    margin: 20px 0px;
+}
+p.info{
+	color:#B2B2B2;
+	margin:10px 0px
+}
+div.dialog .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom: 2px solid rgb(0,132,255);
+	color:rgb(0,132,255);
+}
+div.dialog .layui-this>a{
+	color:rgb(0,132,255);
+}
+div.dialog div.layui-tab .layui-tab-title{
+	float:left;
+	border-bottom: 1px solid rgb(204,230,255);
+}
+div.dialog div.operateMsg{
+	float:right;
+	position: relative;
+    margin-top: 20px;
+}
+div.dialog div.layui-form-select{
+	display: inline-block;
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+div.panel-right {
+    margin-top: 3px;
+    text-align: center;
+    float:right
+}
+div.searchInput {
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    margin-right: 5%;
+}
+div.searchInput>i {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+div.add_answer_div{
+	margin:10px 0px
+}
+div.abilityList>ul{
+	list-style: none;
+}
+div.abilityList>ul>li{
+	float:left;
+	height: 60px;
+    width: 250px;
+    margin: 10px;
+}
+div.abilityList>ul>li>span{
+	display: inline-block;
+	line-height: 56px;;
+}
+span.name{
+	top:20px
+}
+span.title{
+	text-align: center;
+	background: rgb(121,163,255);
+	height:100%;
+	width:40%;
+    color: #fff;
+}
+span.name{
+	background: rgba(121,163,255,0.2);
+	/*width:60%;
+	height:100%;*/
+	/*margin-left: -5px;*/
+ /*   padding-left: 10px;*/
+    box-sizing: border-box;
+}
+div.abilityList>ul:after{
+	clear:both;
+	content:'';
+	display:block;
+	width:0;
+	height:0;
+	visibility:hidden; 
+	zoom:1
+}
+div.orderInfo p{
+	display: inline-block;
+}
+div.orderInfo p>img{
+	margin:0px 10px;
+	cursor:pointer
+}
+
+div#ids , div#idEdit{
+		margin: 20px
+	}
+	
+	.layui-form-label {
+		width: auto;
+		text-align: left;
+	}
+	
+	.layui-input-block {
+		margin-left: 90px;
+		min-height: 36px;
+		padding-right: 15px;
+	}
+	div.bts {
+		text-align: right;
+		padding-right: 15px;
+		margin-top: 80px;
+	}
+	
+	div.bts>button.layui-btn-normal {
+		background-color: rgb(0, 132, 255);
+	}
+div.experiance{
+	position: fixed;
+    right: 0px;
+    top: 40%;
+    cursor:pointer;
+    z-index: 2;
+}
+div.experiance>img{
+	height:98px;
+	width:98px
+}
+
+/*对话交流弹框*/
+p.chatTitle{
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;	
+}
+span.close{
+	float: right;
+}
+div.contentDiv{
+	position: fixed;
+    top: 20%;
+    right: 100px;
+    width: 380px;
+    height: 500px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    z-index: 2;
+    border-radius:2px;
+    display: none;
+}
+ul#contentUL{
+	height: 380px;
+    overflow: auto;
+    padding: 10px 20px;
+}
+p.bottom{
+	width: 95%;
+    margin: 0 auto;
+}
+p.bottom>input{
+	width: 70%;
+	display: inline-block;
+	border:none;
+	border-bottom:1px solid #eaeaea
+}
+p.bottom>button{
+	float:right
+}
+.layim-chat-main ul .layim-chat-mine {
+   text-align: right;
+   padding-left: 0;
+   padding-right: 60px;
+}
+.layim-chat-main ul li {
+    position: relative;
+    font-size: 0;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    min-height: 68px;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}
+li {
+    list-style: none;
+}
+	
+.layim-chat-mine .layim-chat-user {
+    left: auto;
+    right: 3px;
+}
+.layim-chat-user {
+    position: absolute;
+    left: 3px;
+}
+.layim-chat-text, .layim-chat-user {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}
+
+.layim-chat-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}
+img {
+    border: none;
+}
+.layui-btn, .layui-edge, .layui-inline, img {
+    vertical-align: middle;
+}
+.layui-inline, img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+layim-chat-mine .layim-chat-user cite {
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+.layim-chat-user cite {
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    width: 500px;
+    line-height: 24px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #999;
+    text-align: left;
+    font-style: normal;
+}
+
+.layim-chat-mine .layim-chat-text {
+    margin-left: 0;
+    text-align: left;
+    background-color: rgb(238,244,248);
+    color: #666;
+}
+.layim-chat-text {
+    position: relative;
+    line-height: 22px;
+    /*margin-top: 25px;*/
+    padding: 8px 15px;
+    background-color: rgb(238,244,248);
+    border-radius: 3px;
+    color: #333;
+    word-break: break-all;
+    max-width: 462px\9;
+}
+.layim-chat-text, .layim-chat-user {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}	
+
+
+.layim-chat-main {
+   /*  height: 262px; */
+   /* padding: 15px 15px 5px;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}	
+
+.layim-chat-text:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: rgb(238,244,248); transparent transparent;
+    overflow: hidden;
+    border-width: 10px;
+}
+
+
+.layim-chat-mine .layim-chat-text:after {
+    left: auto;
+    right: -10px;
+    border-top-color: rgb(238,244,248);
+}
+.layim-chat-text:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: rgb(238,244,248) transparent transparent;
+    overflow: hidden;
+    border-width: 10px;
+}
+
+.layim-chat-mine .layim-chat-user cite i {
+    padding-left: 0;
+    padding-right: 15px;
+}
+.layim-chat-user cite i {
+    padding-left: 15px;
+    font-style: normal;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}
+
+.layim-chat-mine .layim-chat-user cite {
+    left: auto;
+    right: 60px;
+    text-align: right;
+}
+.layim-chat-user cite {
+    position: absolute;
+    left: 60px;
+    top: -2px;
+    width: 500px;
+    line-height: 24px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #999;
+    text-align: left;
+    font-style: normal;
+}
+.layui-layim cite, .layui-layim em, .layui-layim-chat cite, .layui-layim-chat em {
+    font-style: normal;
+}
+.layui-box, .layui-box * {
+    box-sizing: content-box;
+}
+	
+	
+.layui-input-block {
+	display: flex;
+    margin-left: 16px;
+    margin-bottom:8px;
+    min-height: 36px;
+}
+
+.layui-input, .layui-textarea {
+   /*  display: block;
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px; */
+}
+
+
+.layui-btn {
+    margin-top: 2px;
+    margin-left: 8px;
+    margin-right: 16px;
+    height: 34px;
+    line-height: 34px;
+    background-color: rgb(0,132,255);; 
+   /*  background-color: #009688;  */
+}
+div.dokeyInput{
+	margin-left: 128px;
+}
+div#page1{
+	text-align:right
+}
+body{overflow-y: scroll;}
+p.chatTitle>a{
+	cursor: pointer;
+}
+p.error{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 2px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    display: none;
+    z-index: 22;
+}

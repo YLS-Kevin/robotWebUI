@@ -1,0 +1,11 @@
+<div class="m_bg">
+	<div class="addDiv">
+		<a href="javascript:void(0)"><button class="layui-btn layui-btn-normal addBtn" name="新增"><i class="layui-icon">&#xe654;</i>新增</button></a>
+	</div>
+	<table id="interface" lay-filter="interfaceDemo"></table>
+	<div id="laypage"></div>
+	<script type="text/html" id="switchTpl">
+		<input type="checkbox" name="state" value="{{d.id}}" lay-skin="switch" lay-filter="state" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+<script type="text/javascript" src="res/js/wordBank/table.js"></script>

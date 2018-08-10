@@ -1,0 +1,114 @@
+div.searchInput {
+	width: 30%;
+	margin: 20px;
+}
+div.searchInput1{
+	float: right;
+	width: 40%;
+	margin: 20px;
+}
+form.searching:after,
+div.abilityList>ul:after {
+	clear: both;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	zoom: 1
+}
+
+div.searchInput>i {
+	position: absolute;
+	top: 10px;
+	right: 10px
+}
+div.searchInput1>i {
+	position: absolute;
+	top: 10px;
+	right: 10px
+}
+div.allAbility:after {
+	content: "";
+	clear: both;
+	display: block;
+	overflow: hidden;
+	font-size: 0;
+	height: 0;
+}
+
+div.allAbility ul {
+	list-style: none;
+	/*float: left;*/
+	/*margin-top: -30px;*/
+}
+div.allAbility ul:after{
+	content: "";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+    zoom:1
+}
+div.allAbility ul li {
+	float: left;
+	height: 60px;
+	width: 270px;
+	margin: 10px;
+}
+
+div.allAbility ul li span {
+	display: inline-block;
+	line-height: 60px;
+	margin-top: 2px
+}
+div.abilityList span.name>span{
+	width: 100%;   
+    line-height: 60px;
+    display: inline-block;
+}
+span.title {
+	text-align: center;
+	height: 60px;
+    width: 60px;
+	color: #fff;
+	font-size: 18px;
+}
+
+div.abilityList span.name {
+	width: 190px;
+	height: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+div.allAbility span.name {
+	width: 210px;
+	height: 60px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+span.name>form.layui-form {
+	display: inline-block;
+	float: right;
+	position: relative;
+	right: 10px;
+}
+
+div.abilityBtn {
+	position: relative;
+	margin: 40px 20px;
+	text-align: right;
+}
+
+div.abilityBtn>button {
+	background-color: rgb(24, 117, 240);
+}
+p.a_t{
+	margin:10px
+}
+div.share{
+	margin-top:40px
+}

@@ -1,0 +1,59 @@
+<div class="order">
+	<div class="orderLeft">
+		<span class="t1"><a href="#/ability/"></a></span>
+		<span class="t">&nbsp;/&nbsp;</span>
+		<span class="t2"><a href="#/ability/">多轮对话</a></span>
+		<span class="t">&nbsp;/&nbsp;</span>
+		<span class="t3"><a href="javascript:void(0)"></a></span>
+	</div>
+	<div class="orderRight">
+		<p><a href="https://www.kancloud.cn/yuanls/dialog/687554" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+	</div>
+</div>
+<div class="search_Div">
+	<form class="layui-form" action="">
+		<div class="searchInput" style="width:30%">
+			<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+			<i id="d_search_btn" class="layui-icon"></i>
+		</div>
+		<input type="checkbox" name="" title="接口" lay-skin="primary">
+		<select name="themeState" lay-verify="">
+			<option value="" selected>全部</option>
+			<option value="1">启用</option>
+			<option value="2">禁用</option>
+		</select>
+		<input type="hidden" id="themestatename" value="">
+		<button class="layui-btn layui-btn-normal searching" data-type="reload">搜索</button>
+	</form>
+</div>
+<div class="s-answer">
+	<div class="p_title">
+		<p class="p_title">进入主题的问答</p>
+		<p class="p_btn">
+			<a href="javascript:void(0)"><button id="answer_in" class="add_answer layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加问答</button></a>
+		</p>
+	</div>
+	<div class="gridBg">
+		<table id="s-answer-grid" lay-filter="demo"></table>
+		<div id="page1"></div>
+	</div>
+	<script type="text/html" id="switchTplIn">
+		<input type="checkbox" name="isopen" value="{{d.id}}" lay-skin="switch" lay-filter="isOpen1" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+<div class="d-answer">
+	<div class="p_title">
+		<p class="p_title">进入主题后的问答</p>
+		<p class="p_btn">
+			<a href="javascript:void(0)"><button id="answer_out" class="add_answer layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加问答</button></a>
+		</p>
+	</div>
+	<div class="gridBg">
+		<table id="d-answer-grid" lay-filter="demo1"></table>
+		<div id="page2"></div>
+	</div>
+	<script type="text/html" id="switchTplOut">
+		<input type="checkbox" name="isopen" value="{{d.id}}" lay-skin="switch" lay-filter="isOpen2" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+<script type="text/javascript" src="res/js/ability/themeTable.js"></script>

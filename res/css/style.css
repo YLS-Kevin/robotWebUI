@@ -1,0 +1,314 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: "微软雅黑";
+	color:#666;
+}
+.layui-layout-admin .layui-header{
+	border-bottom: 1px solid #f6f6f6;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-right:0px solid #fff;
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+	min-width: 1024px;
+}
+.layui-layout-body {
+	min-width: 1024px;
+    overflow: auto;
+}
+ul.layui-nav li.layui-nav-item>a:hover{
+	color:rgb(0,132,255)
+}
+div.layui-tab {
+    margin: 10px 0 3px;
+}
+div.layui-tab .layui-tab-title{
+	border-bottom: none;
+}
+img.w{
+	 margin-right: 20px;
+    margin-top: 5px;
+}   
+div.orderLeft {
+	float: left;
+}
+
+div.orderRight {
+	float: right;
+}
+
+div.orderRight>p>a {
+	color:rgb(0, 132, 255);
+}
+div.order:after{
+    display: block;
+    clear: both;
+    height: 0;
+    content: "";
+    visibility: hidden;
+    overflow: hidden;
+}
+div.order span.t1>a , div.order span ,div.order1 span.t1>a , div.order1 span ,div.order span.t11>a , div.order span.t{
+	color:rgb(0,132,255);
+}
+/*选中的状态处于蓝色状态*/
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background-color:rgba(0,132,255,0);
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+/*头部的宽度改为80px*/
+.layui-header {
+    z-index: 1000;
+    height: 80px;
+}
+.layui-layout-admin .layui-logo {
+    line-height: 80px;
+}
+.layui-layout-admin .layui-header .layui-nav {
+    line-height: 80px;
+}
+.layui-nav .layui-nav-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 75px;
+    cursor: pointer;
+}
+ul.layui-nav li.layui-nav-item>a {
+    color: #666;
+    font-size: 18px;
+}
+/*用户登录的头像*/
+img.userImg{
+	height:40px;
+	width:40px;
+	/*border-radius:50%;
+	border:2px solid #57caea*/
+}
+/*通知的图标*/
+i.layui-icon{
+	font-size:20px;
+}
+/*是否显示有新的通知的提示*/
+.layui-nav .layui-badge, .layui-nav .layui-badge-dot {
+    position: absolute;
+    top: 50%;
+    margin: -12px 0px 0;
+    width: 6px;
+    height: 6px;
+}
+/*用户名的下拉框*/
+.layui-nav-child{
+	top: 85px;
+}
+/*左边导航菜单*/
+div.layui-side{
+	border-right:0px solid #fff;
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+}
+.layui-layout-admin .layui-side {
+    top: 80px;
+    background:#fff
+}
+div.leftContent , div.leftContent ul.layui-nav{
+	padding:0px
+}
+div.leftContent li{
+	padding: 10px 10px 10px 20px;
+	cursor: pointer;
+}
+div.leftContent ul.l_list li.active{
+	background-color:#1E9FFF
+}
+div.leftContent ul.l_list li.active>a {
+   color:#fff
+}				
+div.leftContent li:hover{
+	background-color:#1E9FFF
+}
+div.leftContent li:hover>a{
+	color:#fff
+}
+div.addBtnDiv{
+	width:100%;
+	text-align: center;
+	margin: 30px auto 0px;
+    position: relative;
+}
+button.leftContentBtn{
+	border-radius:10px;
+	border:1px solid rgb(0,132,255);
+	background-color:#fff;
+	color:rgb(0,132,255);
+	width:70%;
+}
+button.leftContentBtn:hover{
+	color:rgb(0,132,255);
+	opacity:1
+}
+button.leftContentBtn>i.layui-icon{
+	color:rgb(0,132,255);
+}
+/*右边背景色*/
+.layui-layout-admin .layui-body {
+    top: 80px;
+    bottom: 0px;
+    background: #f9f9f9;
+}
+/*表格的背景色*/
+div.gridBg {
+    background: #fff;
+    height: auto;
+    box-shadow: 2px 2px 10px 1px #ece9e9;
+    margin: 10px 40px;
+    padding: 20px;
+}
+p.p_title{
+	float:left;
+	font-size:18px
+}
+p.p_btn{
+	float:right;
+	font-size:18px
+}
+div.p_title{
+	overflow:auto;
+	zoom:1;
+	margin:20px 40px 10px
+}
+.layui-btn-normal {
+    background-color: rgb(0,132,255);
+}
+button.add_answer>i.layui-icon{
+	color:#fff;
+}
+a.table_edit , a.table_delete{
+	color:rgb(0,132,255)
+}
+.firstActive{
+	border-bottom: 5px solid rgb(0,132,255);
+	position:relative;
+	transition: all .2s;
+    -webkit-transition: all .2s;
+}
+/*checkbox的背景颜色的修改*/
+.layui-form-checked[lay-skin=primary] i {
+    border-color: rgb(0,132,255);
+    background-color: rgb(0,132,255);
+    color: #fff;
+}
+/*下拉框选中的状态*/
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(0,132,255);
+    color: #fff;
+}
+.layui-form-onswitch {
+		border-color: rgb(0, 132, 255);
+		background-color: rgb(0, 132, 255);
+	}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 132, 255);
+}
+span.label-info{
+	background: rgb(246,153,116);
+}
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 8px;
+    cursor: pointer;
+    color:#fff
+}
+/*.layui-table-cell{
+    /*height: auto; 
+    line-height: 28px;
+    padding: 0 15px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    box-sizing: border-box;
+   word-wrap: break-word;
+}*/
+.layui-laydate td.layui-this {
+    background-color: rgb(0, 132, 255)!important;
+    color: #fff!important;
+}
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this {
+    background-color: #fff;
+    color: #666;
+}
+/*接口列表的样式*/
+input#explains{
+	width: 95%;
+    margin: 10px auto;
+}
+/*tagsInput*/
+div.inline-item-long1 div.layui-input-inline{
+	width: 50%;
+    /* width: 47%; */
+    min-height: 38px;
+}
+.bootstrap-tagsinput {
+	background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: none;
+    display: inline-block;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 2px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+    width: 100%;
+    height: 100%;
+    min-height:28px
+}
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+}
+.bootstrap-tagsinput .tag {
+    color: white;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+div.bootstrap-tagsinput input{
+	border:none;
+	height: 28px;
+	width: 40%;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-left: 8px;
+    cursor: pointer;
+}
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "x";
+    padding: 0px 2px;
+}
+i.layui-icon{
+	cursor:pointer;
+}
+.layui-body{overflow-y: scroll;}
+::-ms-clear,::-ms-reveal{display:none;}
+p.showCurrPage{
+	display: none;
+}
+.tipso_style{
+	border:none
+}

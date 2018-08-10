@@ -1,0 +1,12 @@
+<div class="m_bg robotTable">
+	<div class="addDiv">
+		<a href="javascript:void(0)"><button class="layui-btn layui-btn-normal addBtn" name="创建机器人"><i class="layui-icon">&#xe654;</i>创建机器人</button></a>
+	</div>
+	<table id="robotT" lay-filter="demo"></table>
+	<div id="RobotPage"></div>
+	<script type="text/html" id="switchTpl">
+		<input type="checkbox" name="state" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="state" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+
+<script type="text/javascript" src="res/js/index/table.js"></script>

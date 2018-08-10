@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./res/css/index/add.css">
+<div class="layui-fluid">
+	<div class="addRobot">
+		<div class="order">
+			<div class="orderLeft">
+				<span class="t1"><a href="javascript:void(0)">机器人管理</a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t2"><a href="javascript:void(0)">创建机器人</a></span>
+			</div>
+			<div class="orderRight">
+				<p>
+					<a href="https://www.kancloud.cn/yuanls/dialog/687544" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a>
+				</p>
+			</div>
+		</div>
+		<p class="add_title">新建机器人</p>
+		<div class="addForm">
+			<form class="layui-form" action="">
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="red">*</span>机器人名</label>
+					<div class="layui-input-block">
+						<input type="text" name="cname" lay-verify="required|cname" placeholder="长度为1-30个字符" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="red">*</span>所属行业</label>
+					<div class="layui-input-block">
+						<select id="industry" name="intrade" lay-verify="required">
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="red">*</span>功能描述</label>
+					<div class="layui-input-block">
+						<textarea name="remarks" lay-verify="required|remarks" placeholder="请简述使用场景、应用特点等信息，不超过1000个字符" autocomplete="off" class="layui-textarea"></textarea>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit lay-filter="submitAdd">确认</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/index/add.js"></script>

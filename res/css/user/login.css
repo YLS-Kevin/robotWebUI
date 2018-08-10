@@ -1,0 +1,30 @@
+html,body{
+	background: url(../../image/user/zc_bj.jpg) no-repeat;
+}
+span.shu {
+	color:rgb(0,132,255);
+	font-size:14px
+}
+ div.Third_div{
+	color:#9F9F9F;
+	font-size:14px
+}
+div.communicity div.Third_div{
+	margin-top:40px
+}
+div.Third_div img{
+	height:36px;
+	width:36px;
+	display: inline-block;
+	margin:10px 10px;
+	cursor:pointer
+}
+div.r_main>.layui-tab-brief>.layui-tab-title>li{
+	text-align: left;
+	width:52px	
+}
+div.communicity div.layui-tab-content{
+	margin-top:20px
+}
+input[type=text]::-ms-clear{display:none;}
+input::-ms-reveal{display:none}

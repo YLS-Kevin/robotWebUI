@@ -1,0 +1,278 @@
+<link rel="stylesheet" href="./res/css/ability/sanswer.css">
+<div>
+	<input type="hidden" class="abilityState" state="add">
+	<div class="order">
+		<div class="orderLeft">
+			<span class="t1"><a href="javascript:void(0)"></a></span>
+			<span class="t">&nbsp;/&nbsp;</span>
+			<span class="t2"><a href="javascript:void(0)">单轮对话</a></span>
+			<span class="t">&nbsp;/&nbsp;</span>
+			<span class="t3"><a href="javascript:void(0)">添加问答</span>
+		</div>
+		<div class="orderRight">
+			<p><a href="https://www.kancloud.cn/yuanls/dialog/687553" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+		</div>
+	</div>
+	<div class="s-title">
+		<span>添加问答</span>
+	</div>
+	<div class="s-content">
+		<div class="part_one">
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+				<ul class="layui-tab-title">
+					<li class="layui-nav-item layui-this" aptype="1">
+						<a href="javascript:void(0)" class="mohumatch">模糊匹配</a>
+					</li>
+					<li class="layui-nav-item" aptype="2">
+						<a href="javascript:void(0)">关键词匹配</a>
+					</li>
+				</ul>
+				<div style="clear:both"></div>
+				<div class="layui-tab-content">
+					<!--模糊匹配-->
+					<div class="layui-tab-item layui-show">
+						<div class="vague_msgs">
+							<div class="vague_list">
+								<input name="title" lay-verify="title" autocomplete="off" placeholder="请输入问题" class="layui-input mohu" type="text">
+							</div>
+						</div>
+						<div class="vague_btn">
+							<button id="vague_add" class="layui-btn-normal layui-btn" id="add_vague"><i class="layui-icon">&#xe654;</i>添加</button>
+						</div>
+					</div>
+					<!--关键词匹配-->
+					<div class="layui-tab-item keyMain">
+						<div class="key_msgs">
+							<p class="keyword">关键词</p>
+							<div class="keyWorldList">
+								<div class="singleKeyWorld">
+									<div class="input">
+										<span>1.</span>
+										<input type="text" class="layui-input key" placeholder="关键词">
+										<i class="layui-icon crash crash1">&#xe640;</i>
+										<div class="dropDown">
+											<form class="layui-form" action="">
+												<div class="searchInput">
+													<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+													<i class="d_search_btn layui-icon">&#xe615;</i>
+												</div>
+											</form>
+											<ul class="ullist">
+
+											</ul>
+											<div id="keyWordPage0" class="page"></div>
+										</div>
+									</div>
+									<div class="nearInput input">
+										<input type="text" class="layui-input" data-role="tagsinput" placeholder="同义词/近义词" />
+										<i class="layui-icon crash crash2">&#xe640;</i>
+									</div>
+
+								</div>
+								<div class="singleKeyWorld">
+									<div class="input">
+										<span>2.</span>
+										<input type="text" class="layui-input key" placeholder="关键词">
+										<i class="layui-icon crash crash1">&#xe640;</i>
+										<div class="dropDown">
+											<form class="layui-form" action="">
+												<div class="searchInput">
+													<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+													<i class="d_search_btn layui-icon">&#xe615;</i>
+												</div>
+											</form>
+											<ul class="ullist">
+
+											</ul>
+											<div id="keyWordPage1" class="page"></div>
+										</div>
+									</div>
+									<div class="nearInput input">
+										<input type="text" class="layui-input" value="" data-role="tagsinput" placeholder="同义词/近义词" />
+										<i class="layui-icon crash crash2">&#xe640;</i>
+									</div>
+								</div>
+								<div class="singleKeyWorld">
+									<div class="input">
+										<span>3.</span>
+										<input type="text" class="layui-input key" placeholder="关键词">
+										<i class="layui-icon crash crash1">&#xe640;</i>
+										<div class="dropDown">
+											<form class="layui-form" action="">
+												<div class="searchInput">
+													<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+													<i class="d_search_btn layui-icon">&#xe615;</i>
+												</div>
+											</form>
+											<ul class="ullist">
+
+											</ul>
+											<div id="keyWordPage2" class="page"></div>
+										</div>
+									</div>
+									<div class="nearInput input">
+										<input type="text" class="layui-input" value="" data-role="tagsinput" placeholder="同义词/近义词" />
+										<i class="layui-icon crash crash2">&#xe640;</i>
+									</div>
+								</div>
+								<div class="singleKeyWorld">
+									<div class="input">
+										<span>4.</span>
+										<input type="text" class="layui-input key" placeholder="关键词">
+										<i class="layui-icon crash crash1">&#xe640;</i>
+										<div class="dropDown">
+											<form class="layui-form" action="">
+												<div class="searchInput">
+													<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+													<i class="d_search_btn layui-icon">&#xe615;</i>
+												</div>
+											</form>
+											<ul class="ullist">
+
+											</ul>
+											<div id="keyWordPage3" class="page"></div>
+										</div>
+									</div>
+									<div class="nearInput input">
+										<input type="text" class="layui-input" value="" data-role="tagsinput" placeholder="同义词/近义词" />
+										<i class="layui-icon crash crash2">&#xe640;</i>
+									</div>
+								</div>
+								<div class="singleKeyWorld">
+									<div class="input">
+										<span>5.</span>
+										<input type="text" class="layui-input key" placeholder="关键词">
+										<i class="layui-icon crash crash1">&#xe640;</i>
+										<div class="dropDown">
+											<form class="layui-form" action="">
+												<div class="searchInput">
+													<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+													<i class="d_search_btn layui-icon">&#xe615;</i>
+												</div>
+											</form>
+											<ul class="ullist">
+
+											</ul>
+											<div id="keyWordPage4" class="page"></div>
+										</div>
+									</div>
+									<div class="nearInput input">
+										<input type="text" class="layui-input" value="" data-role="tagsinput" placeholder="同义词/近义词" />
+										<i class="layui-icon crash crash2">&#xe640;</i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="keyWorldList_btn">
+							<button class="layui-btn-normal layui-btn" id="add_key"><i class="layui-icon">&#xe654;</i>添加关键词</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="part_two">
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabAnswer">
+				<ul class="layui-tab-title">
+					<li class="layui-nav-item layui-this" id="fixedAnswer" isInterface="2">
+						<a href="javascript:void(0)">固定回答</a>
+					</li>
+					<li class="layui-nav-item" id="interAnswer" style="display: none;" isInterface="3">
+						<a href="javascript:void(0)">接口回答</a>
+					</li>
+				</ul>
+				<!--<div class="operateMsg">
+					<a>?&nbsp;&nbsp;&nbsp;操作说明</a>
+				</div>-->
+				<div style="clear:both"></div>
+				<div class="layui-tab-content">
+					<!--固定回答-->
+					<div class="layui-tab-item layui-show fixeddiv">
+						<div class="vague_answer">
+							<div class="vague_list1">
+								<input name="title" lay-verify="title" autocomplete="off" placeholder="请输入固定答案" class="layui-input fixed_answer" type="text">
+							</div>
+						</div>
+						<div class="vague_btn">
+							<button class="layui-btn-normal layui-btn" id="add_answer"><i class="layui-icon">&#xe654;</i>添加</button>
+						</div>
+						<!--返回脚本-->
+						<div class="footer1">
+							<p>返回脚本：</p>
+							<div class="layui-input-block">
+								<textarea placeholder="请输入内容" class="layui-textarea" id="script"></textarea>
+							</div>
+							<div class="vague_btn">
+								<button class="layui-btn-normal layui-btn" onclick="save()">保存</button>
+							</div>
+						</div>
+					</div>
+					<!--接口回答-->
+					<div class="layui-tab-item interDiv">
+						<div class="interfaceAnswer">
+							<div class="layui-input-block">
+								<div class="searchSelect">
+									<form class="layui-form" action="">
+										<div class="layui-input-block">
+											<input id="interList" type="text" name="msg" placeholder="请选择接口列表" readonly="readonly" autocomplete="off" class="layui-input">
+										</div>
+									</form>
+									<div class="searchDiv">
+										<input class="layui-input" type="text" id="explains" placeholder="请输入接口名称"><i class="layui-icon searchExplain">&#xe615;</i>
+										<ul>
+
+										</ul>
+										<div id="InterfacePage"></div>
+									</div>
+								</div>
+								<div class="inter">
+
+								</div>
+							</div>
+						</div>
+						<div class="footer">
+							<div class="layui-form-item">
+								<form class="layui-form" action="">
+									<label class="layui-form-label">返回脚本：</label>
+									<div class="layui-input-block">
+										<input type="radio" lay-filter="erweima" name="foot" value="1" title="无" checked>
+										<input type="radio" lay-filter="erweima" name="foot" value="2" title="接口中返回">
+										<input type="radio" lay-filter="erweima" name="foot" value="3" title="自定义返回">
+									</div>
+								</form>
+							</div>
+							<div class="layui-input-block radioDiv" style="display: none;">
+								<div class="t0 script_t0"><input type="text" class="layui-input" placeholder="返回参数"></div>
+								<form class="footForm layui-form" action="">
+									<select name="modules" lay-verify="required" lay-search="">
+										<option value="1" selected="">包含</option>
+										<option value="2">不包含</option>
+										<option value="3">等于</option>
+										<option value="4">不等于</option>
+									</select>
+								</form>
+								<div class="nearInput1 input">
+									<input type="text" class="layui-input" data-role="tagsinput" />
+								</div>
+								<textarea placeholder="请输入内容" class="layui-textarea ta"></textarea>
+
+							</div>
+							<div class="vague_btn" style="display: none;">
+								<button class="layui-btn-normal layui-btn" id="add_foot"><i class="layui-icon">&#xe654;</i>新增脚本</button>
+							</div>
+						</div>
+						<div class="vague_btn">
+							<button class="layui-btn-normal layui-btn" id="save_interface" onclick="saveInterface()">保存</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/ability/sanswer.js"></script>
+<script type="text/javascript" src="res/common/dialog/addDialog.js"></script>
+<script type="text/javascript" src="res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.js"></script>

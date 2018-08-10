@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="./res/css/index/train.css">
+<div class="layui-fluid tainMAin">
+	<div class="trainTop">
+		<div class="order1">
+			<div class="orderLeft">
+				<span class="t1"><a href="javascript:void(0)"></a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t2"><a href="javascript:void(0)">训练</a></span>
+			</div>
+			<div class="orderRight">
+				<p><a href="https://www.kancloud.cn/yuanls/dialog/687549" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+			</div>
+		</div>
+		<div class="secondOrder">
+			<input id="getName" type="hidden">
+			<ul class="ul_List">
+				<!--<li class="addBtn">+</li>-->
+			</ul>
+		</div>
+		<div class="searchInfos"></div>
+	</div>
+	<div id="changeLink"></div>
+	
+	<div class="experiance"><img src="./res/image/index/experiance.png"></div>
+	<div class="contentDiv layim-chat-main">
+		<p class="error">不能发送空记录</p>
+		<p class="chatTitle">
+			<span class="robot_name"></span><span>&nbsp&nbsp|&nbsp&nbsp</span>
+			<a>清除消息</a>
+			</span>
+			<span class="close"><i class="layui-icon">&#x1006;</i>   </span>
+		</p>
+		<ul id="contentUL">
+			<li class="">
+				<div class="layim-chat-user">
+					<img src="./res/image/index/r_icon.png">
+				</div>
+				<div class="layim-chat-text">有什么可以帮助您的？</div>
+			</li>
+		</ul>
+		<p class="bottom">
+			<input type="text" class="layui-input" placeholder="快来和我聊天吧" id="chatMsg">
+			<button class="layui-btn" id="send">发送</button>
+		</p>
+	</div>
+</div>
+
+<div id="ids" style="display: none;">
+	<!--<input type="text" style="display:none" id="modifyMsg">-->
+	<div class="layui-form-item">
+		<label class="layui-form-label">情景模块名称：</label>
+		<div class="layui-input-block">
+			<input type="text" name="model" lay-verify="required|model" placeholder="请输入模块名称" autocomplete="off" class="layui-input ch_name">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<label class="layui-form-label">触发关键字：</label>
+		<div class="layui-input-block dokeyInput">
+			<!--<input type="text" name="key" lay-verify="required|key" autocomplete="off" class="layui-input" data-role="tagsinput">-->
+			<input name="enter_anwer1" autocomplete="off" class="layui-input" type="text" data-role="tagsinput">
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="res/js/index/train.js"></script>

@@ -1,0 +1,348 @@
+<button class="layui-btn layui-btn-normal layui-btn-radius create-btn"><i class="layui-icon">&#xe654;</i>新增</button>
+
+<!-- 搜索栏 -->
+<div class="search-bar fr">
+    搜索ID：
+    <div class="layui-inline">
+        <input class="layui-input" name="id" id="search-id" autocomplete="off">
+    </div>
+    搜索标题：
+    <div class="layui-inline">
+        <input class="layui-input" name="title" id="search-title" autocomplete="off">
+    </div>
+    <button class="layui-btn layui-btn-normal" data-type="reload">搜索</button>
+</div>
+
+<!-- 表格 -->
+<table id="article-list" lay-filter="article-list"></table>
+
+<!-- 状态 -->
+<script id="status-tpl" type="text/html">
+    {{# if (d.status == 1){ }}
+    <span style="color: #1E9FFF;">{{ d.status_text }}</span>
+    {{# } else if (d.status == 2){ }}
+    {{ d.status_text }}
+    {{# } }}
+</script>
+
+<!-- 列表工具栏 -->
+<script id="tool-bar-tpl" type="text/html">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail"><i class="layui-icon"></i> 查看</a>
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon">&#xe642;</i>编辑</a>
+    {{# if(d.status != 3) { }}
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>
+    {{# } }}
+    {{# if(d.status == 0) { }}
+    <a class="layui-btn layui-btn-mini" lay-event="check">publish</a>
+    {{#  } }}
+</script>
+
+<!-- 文章详情 -->
+<script id="article-detail-tpl" type="text/html">
+    <div class="layui-fluid mt20 mb20">
+        <h1>{{ d.title }}</h1>
+        <p>{{ d.content }}</p>
+    </div>
+</script>
+
+<!-- 文章新增 -->
+<script id="article-create-tpl" type="text/html">
+    <div class="layui-fluid mt20 mb20">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
+                           autocomplete="off"
+                           class="layui-input" value="">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">内容</label>
+                <div class="layui-input-block">
+                    <textarea name="content" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="1" selected>正常</option>
+                        <option value="2">暂停</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="submit-form">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<!-- 文章编辑 -->
+<script id="article-edit-tpl" type="text/html">
+    <div class="layui-fluid mt20 mb20">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
+                           autocomplete="off"
+                           class="layui-input" value="{{ d.title }}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">内容</label>
+                <div class="layui-input-block">
+                    <textarea name="content" required lay-verify="required" placeholder="请输入" class="layui-textarea">{{ d.content }}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="1" {{# if (d.status== 1) { }} selected {{# } }}>正常</option>
+                        <option value="2" {{# if (d.status== 2) { }} selected {{# } }}>暂停</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="hidden" name="id" value="{{ d.id }}">
+                    <button class="layui-btn" lay-submit lay-filter="submit-form">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script>
+    layui.use(['table', 'layer', 'laytpl', 'form', 'setting'], function () {
+        var table = layui.table
+            , $ = layui.$
+            , layer = layui.layer
+            , laytpl = layui.laytpl
+            , form = layui.form
+            , setting = layui.setting;
+        // 表格渲染
+        var tableIns = table.render({
+            elem: '#article-list'
+            , url: setting.api_url + '/admin/article/index' //数据接口
+            , page: true //开启分页
+            , limit: 10
+            , cols: [[ //表头
+                {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
+                , {field: 'title', title: '标题'}
+                , {field: 'nickname', title: '发布者'}
+                , {field: 'status_text', title: '状态', templet: '#status-tpl'}
+                , {field: 'create_time', title: '创建时间'}
+                , {field: 'update_time', title: '更新时间'}
+                , {title: '操作', fixed: 'right', width: 200, toolbar: '#tool-bar-tpl'}
+            ]]
+        });
+
+        // 表格的搜索
+        var active = {
+            reload: function () {
+                var searchId = $('#search-id');
+                var searchTitle = $('#search-title');
+
+                //执行重载
+                tableIns.reload({
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    , where: {
+                        id: searchId.val()
+                        , title: searchTitle.val()
+                    }
+                });
+            }
+        };
+        $('.search-bar .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
+        //监听工具条
+        table.on('tool(article-list)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+            if (layEvent === 'detail') { //查看
+                var detail_html = laytpl($('#article-detail-tpl').html()).render(data);
+                layer.open({
+                    type: 1
+                    , title: '详情'
+                    , content: detail_html
+                    , area: ['500px', '300px']
+                });
+            } else if (layEvent === 'del') { //删除
+                layer.confirm('真的删除行么', function (index) {
+                    var loading = layer.load(2)
+                    $.ajax({
+                        type: 'post'
+                        , url: setting.api_url + '/admin/article/del' //数据接口
+                        , data: {id: data.id}
+                        , success: function (res) {
+                            if (res.code == 0) {
+                                layer.msg('删除成功', {
+                                    time: 1500
+                                    , icon: 1
+                                    , shade: 0.5
+                                    , end: function () {
+                                        obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                        layer.close(loading);
+                                    }
+                                });
+                            } else {
+                                layer.msg('编辑失败', {
+                                    time: 1500
+                                    , icon: 2
+                                    , shade: 0.3
+                                    , end: function () {
+                                        layer.close(loading);
+                                    }
+                                });
+                                return 0;
+                            }
+                        }
+                        , error: function (res) {
+                            layer.msg('通信异常, 请稍后重新', {
+                                time: 3000
+                                , icon: 0
+                                , shade: 0.7
+                                , end: function () {
+                                    layer.close(loading);
+                                }
+                            });
+                            return 0;
+                        }
+                    });
+                    layer.close(index);
+                });
+            } else if (layEvent === 'edit') { //编辑
+                var edit_html = laytpl($('#article-edit-tpl').html()).render(data);
+                var edit_layer = layer.open({
+                    type: 1
+                    , title: '编辑'
+                    , content: edit_html
+                    , area: ['600px', '400px']
+                });
+
+                // 监听提交
+                form.on('submit(submit-form)', function (data) {
+                    var loading = layer.load(2);
+                    $.ajax({
+                        type: 'post'
+                        , url: setting.api_url + '/admin/article/edit' //数据接口
+                        , data: data.field
+                        , success: function (res) {
+                            if (res.code == 0) {
+                                layer.msg('编辑成功', {
+                                    time: 1500
+                                    , icon: 1
+                                    , shade: 0.5
+                                    , end: function () {
+                                        obj.update(res.data)
+                                        layer.close(loading);
+                                        layer.close(edit_layer);
+                                    }
+                                });
+                            } else {
+                                layer.msg('编辑失败', {
+                                    time: 1500
+                                    , icon: 2
+                                    , shade: 0.3
+                                    , end: function () {
+                                        layer.close(loading);
+                                    }
+                                });
+                                return 0;
+                            }
+                        }
+                        , error: function (res) {
+                            layer.msg('通信异常, 请稍后重新', {
+                                time: 3000
+                                , icon: 0
+                                , shade: 0.7
+                                , end: function () {
+                                    layer.close(loading);
+                                }
+                            });
+                            return 0;
+                        }
+                    });
+                    return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+                });
+
+                // 重新渲染表格
+                form.render();
+            }
+        });
+
+        // 新增
+        $(document).on('click', '.create-btn', function () {
+            var create_html = laytpl($('#article-create-tpl').html()).render({});
+            var create_layer = layer.open({
+                type: 1
+                , title: '新增'
+                , content: create_html
+                , area: ['600px', '400px']
+            });
+
+            // 监听提交
+            form.on('submit(submit-form)', function (data) {
+                var loading = layer.load(2);
+                $.ajax({
+                    type: 'post'
+                    , url: setting.api_url + '/admin/article/create' //数据接口
+                    , data: data.field
+                    , success: function (res) {
+                        if (res.code == 0) {
+                            layer.msg('新增成功', {
+                                time: 1500
+                                , icon: 1
+                                , shade: 0.5
+                                , end: function () {
+                                    tableIns.reload();
+                                    layer.close(loading);
+                                    layer.close(edit_layer);
+                                }
+                            });
+                        } else {
+                            layer.msg('新增失败', {
+                                time: 1500
+                                , icon: 2
+                                , shade: 0.3
+                                , end: function () {
+                                    layer.close(loading);
+                                }
+                            });
+                            return 0;
+                        }
+                    }
+                    , error: function (res) {
+                        layer.msg('通信异常, 请稍后重新', {
+                            time: 3000
+                            , icon: 0
+                            , shade: 0.7
+                            , end: function () {
+                                layer.close(loading);
+                            }
+                        });
+                        return 0;
+                    }
+                });
+                return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+            });
+            // 重新渲染表格
+            form.render();
+        })
+    });
+</script>

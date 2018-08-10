@@ -1,0 +1,288 @@
+div.m{
+	width:97%;
+	position:relative;
+	margin:20px auto 20px;
+}
+p.m_title{	
+	font-size:18px
+}
+p.m_title1{
+	width:97%;
+	position:relative;
+	margin:20px auto 20px;
+	font-size:18px
+}
+div.m_bg{
+	position:relative;
+	margin:20px auto;
+	width:97%;
+	background:#fff;
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+	padding:20px 40px 40px;
+	box-sizing: border-box;
+}
+div.m_bg>div.borderDiv{
+	border:1px solid #dcdcdc;
+	width:100%;
+	height:200px
+}
+div.wordType , div.wordType>ul{
+	display:inline-block;
+	width: 100%;
+}
+div.addDiv{
+	margin-top: 20px;
+    width: 36%;
+    height: 70px;
+    min-width: 600px;
+}
+div.m:after , div.wordBttom:after , li.wordList:after{
+	display: block;
+    clear:both;
+    height:0;
+    content: "";
+    visibility: hidden;
+    overflow:hidden;
+}
+p.m_name{
+	float:left
+}
+p.m_search{
+	float:right;
+	width:20%
+}
+p.mm_search{
+	float: left;
+    width: 30%;
+    position: relative;
+    margin: 10px;
+}
+p.m_search>i ,  p.mm_search>i{
+	position:absolute;
+	top:8px;
+	right:8px
+}
+div.addDiv{
+	margin-top:20px
+}
+div.addDiv>button{
+	background: rgba(121,163,255,0.2);
+    width: 100%;
+    height: 100%;
+    color:rgb(0,132,255);
+    border-radius:5px
+}
+button.addBtn>i{
+	color:rgb(0,132,255);
+}
+div.addDiv>button:hover{
+	color:rgb(0,132,255);
+}
+p.p_title{
+	position:relative;
+	margin:0px auto 20px;
+	display: inline-block;
+	float:left
+}
+p.p_right{
+	float:right
+}
+p.p_right>a{
+	color:rgb(0,132,255)
+}
+div.wordType>ul:after{
+	clear:both;
+	content:'';
+	display:block;
+	width:0;
+	height:0;
+	visibility:hidden; 
+	zoom:1
+}
+
+div.wordType>ul>a{
+	background:rgba(121,163,255,0.2);
+	height:70px;
+	border-radius:5px;
+	width: 36%;;
+	margin-right: 5%;
+    margin-bottom: 1%;
+    cursor:pointer;
+    min-width: 600px;
+    position:relative;
+    display: inline-block;
+}
+li.wordList>p{
+	display: inline-block;
+    cursor:pointer;
+    /*float: left;*/
+    margin-left: 40px;
+    text-align: center;
+}
+li.wordList>p.firstWord{
+	height: 48px;
+    border-radius: 5px;
+    background-color: rgb(121,163,255);
+    text-align: center;
+    font-size: 24px;
+    line-height: 48px;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    margin: 11px 12px;
+    width: 48px;
+}
+div.names{
+	    display: inline-block;
+    position: relative;
+    top: 6px;
+    /* float: left; */
+    width: 30%;
+    margin-top: 10px;
+    min-width: 200px;
+}
+p.name_ch , p.name_en{
+	font-weight: bold;
+   /* padding-top: 30px;*/
+}
+p.name_ch{
+	cursor:pointer
+}
+p.state , p.delete{
+	padding-top: 26px;
+}
+p.state>span{
+	color:rgb(30,191,8)
+}
+p.share{	
+	padding-top: 26px;	
+	width:56px
+}
+p.share>span{
+	color:rgb(0,132,255);
+	cursor:pointer
+}
+p.delete>i{
+	color:red;
+	cursor:pointer
+}
+div.words{
+	/*height: 200px;*/
+    border: 1px solid rgb(0,132,255);
+    background: #fff;
+    margin-top:5px;
+    border-radius:5px;
+    display: none;
+    position: absolute;
+    z-index: 2;    
+    min-width: 600px;
+}
+li.active{
+	border: 1px solid rgb(0,132,255);
+}
+div.allList ,div.add_div{
+
+	display: inline-block;
+}
+div.allList>a{
+	display: inline-block;
+    background-color: rgb(121,163,255);
+    border-radius: 2px;
+    padding: 8px 18px;
+    color: #fff;
+    margin:10px;
+    position: relative;
+}
+div.words_list>div.add_div>a{
+	background-color:rgb(0,132,255);
+	padding: 8px 10px;
+	color:#fff;
+	margin:10px;
+	display: inline-block;
+}
+div.words_list>div.add_div>a>i{
+	color:#fff;
+	font-size:15px
+}
+div.allList>a>img{
+	position: absolute;
+    top: -5px;
+    right: -4px;
+    display: none;
+}
+div#formType{
+	margin:20px
+}	
+.layui-form-label {
+    width:auto;
+    text-align: left;
+}
+.layui-input-block {
+    margin-left: 90px;
+    min-height: 36px;
+    padding-right: 15px;
+}
+div.bts{
+	text-align: right;
+	padding-right: 15px;
+	margin-top: 80px;
+}
+div.bts>button.layui-btn-normal{
+	background-color:rgb(0,132,255);
+}
+div#sharePage{
+	text-align: right;
+    margin-top: 60px;
+    margin-right: 90px;
+}
+div.words_list p.m_search{
+	position: relative;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    width: 40%;
+}
+div.wordPage{
+   float:right;
+   margin-right:10px;
+    margin-top: 10px;
+}
+
+div.wordBttom{
+	position: relative;
+    width: 100%;
+    bottom: 0px
+}
+div.words_list{
+   /* height: 70%;*/
+    overflow: auto;
+}
+form.layui-form {
+		margin: 20px
+	}
+div.wordPage div.page{
+	text-align: right;
+    margin-right: 10px;
+}
+div.wordPage div.page .layui-laypage>a:first-child, div.wordPage .layui-laypage>a:first-child em {
+    border-radius: 2px 0 0 2px;
+}
+div.wordPage div.page .layui-laypage a,div.wordPage .layui-laypage span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border:none;
+    cursor: pointer;
+}
+div.layui-laypage>a{
+	border:none;
+	padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+}

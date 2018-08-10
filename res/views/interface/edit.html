@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="./res/css/interface/add.css">
+<div class="layui-fluid">
+	<div class="addInterface">
+		<div class="order">
+			<div class="orderLeft">
+				<span class="t1"><a href="javascript:void(0)"></a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t2"><a href="javascript:void(0)">修改</a></span>
+			</div>
+			<div class="orderRight">
+			<p><a href="https://www.kancloud.cn/yuanls/dialog/687557" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+		</div>
+		</div>
+
+		<div class="addForm">
+			<!--<p class="inter_A">
+				<a href="javascript:void(0)">?接口开发示例</a>
+			</p>-->
+			<form class="layui-form" action="">
+				<div class="layui-form-item layui-col-xs12">
+					<label class="layui-form-label"><span class="red">*</span>接口名：</label>
+					<div class="layui-input-block">
+						<input type="text" name="name" lay-verify="required|name" placeholder="请输入接口名称" autocomplete="off" class="layui-input inter_name">
+					</div>
+				</div>
+				<div class="layui-form-item layui-col-xs12">
+					<label class="layui-form-label"><span class="red">*</span>调试URL：</label>
+					<div class="layui-input-block">
+						<input type="text" name="testUrl" lay-verify="required|testUrl" placeholder="请输入测试URL" autocomplete="off" class="layui-input test_url">
+					</div>
+				</div>
+				<div class="layui-form-item checkbox-item layui-col-xs12" style="display: none;">
+					<input type="checkbox" value="key_one" name="key_one" title="有密钥" lay-skin="primary" checked lay-filter="ck">
+				</div>
+				<div class="layui-col-xs12" id="key_one_div" style="display: none;">
+					<div class="layui-inline inline-item layui-col-xs6">
+						<label class="layui-form-label"><span class="red">*</span>ID：</label>
+						<div class="layui-input-inline">
+							<input name="id" lay-verify="id" autocomplete="off" class="layui-input" type="text">
+						</div>
+					</div>
+					<div class="layui-inline inline-item layui-col-xs6">
+						<label class="layui-form-label"><span class="red">*</span>密钥：</label>
+						<div class="layui-input-inline">
+							<input name="pwd_key" lay-verify="pwd_key" autocomplete="off" class="layui-input" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="layui-form-item layui-col-xs12">
+					<label class="layui-form-label"><span class="red">*</span>生产URL：</label>
+					<div class="layui-input-block">
+						<input type="text" name="produceUrl" lay-verify="required|produceUrl" placeholder="请输入生产URL" autocomplete="off" class="layui-input url">
+					</div>
+				</div>
+				<div class="layui-form-item checkbox-item layui-col-xs12" style="display: none;">
+					<input type="checkbox" value="key_two" name="key_two" title="有密钥" lay-skin="primary" checked lay-filter="ck">
+				</div>
+				<div class="layui-col-xs12" id="key_two_div" style="display: none;">
+					<div class="layui-inline inline-item layui-col-xs6">
+						<label class="layui-form-label"><span class="red">*</span>ID：</label>
+						<div class="layui-input-inline">
+							<input name="id2" lay-verify="id2" autocomplete="off" class="layui-input" type="text">
+						</div>
+					</div>
+					<div class="layui-inline inline-item layui-col-xs6">
+						<label class="layui-form-label"><span class="red">*</span>密钥：</label>
+						<div class="layui-input-inline">
+							<input name="pwd_key2" lay-verify="pwd_key2" autocomplete="off" class="layui-input" type="text">
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="layui-inline inline-item inline-item-long1 layui-col-xs6">
+						<label class="layui-form-label">URL需要输入参数：</label>
+						<div class="layui-input-inline p" style="border:1px solid #eaeaea">
+							<input id="param" style="width:50%;border:none;display: inline-block;" type="text" name="param" lay-verify="param" autocomplete="off" class="layui-input param"/>
+						</div>
+					</div>
+					<div class="layui-inline inline-item inline-item-long1 layui-col-xs6">
+						<label class="layui-form-label">参数测试值：</label>
+						<div class="layui-input-inline v" style="border:1px solid #eaeaea">
+							<input id="paramValue" style="width:50%;border:none;display: inline-block;" type="text" name="paramValue" lay-verify="paramValue" autocomplete="off" class="layui-input paramValue"/>
+						</div>
+						<button class="layui-btn submitTest" type="button">测试</button>
+					</div>
+				</div>
+				<div class="layui-form-item" id="isip">
+					<label class="layui-form-label"><span class="red">*</span>是否终端：</label>
+					<div class="layui-input-block">
+						<select id="isFrontCall" name="" lay-verify="required">
+							<option value="1">是</option>
+							<option value="0">否</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item" id="icall">
+					<label class="layui-form-label"><span class="red">*</span>调用方式：</label>
+					<div class="layui-input-block">
+						<select id="ajaxtype" name="intrade" lay-verify="required">
+							<option value="get">get</option>
+							<option value="post">post</option>
+						</select>
+					</div>
+				</div>
+				<button type="button" class="layui-btn submitAdd" lay-submit lay-filter="submitAdd">确认</button>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/interface/edit.js"></script>
+<script type="text/javascript" src="res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.js"></script>
+

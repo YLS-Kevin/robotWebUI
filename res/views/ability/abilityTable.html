@@ -1,0 +1,66 @@
+<input type="hidden" class="abilityState" state="table">
+<div class="touDiv">
+	<img class="headerImg" src="./res/image/ability/abilityIcon.png">
+</div>
+<div class="panel">
+
+	<div class="panel-top">
+		<p class="panel-title"></p>
+	</div>
+	<div class="panel-bottom layui-row">
+		<div class="panel-left layui-col-xs12 layui-col-lg6">
+			<span class="layui-col-xs3">状态&nbsp;&nbsp;&nbsp;<span class="share"></span></span>
+			<span class="layui-col-xs3">被引用&nbsp;&nbsp;&nbsp;<span class="be_quoted"></span></span>
+			<span class="layui-col-xs3 delete-span" id="del_com">删除&nbsp;<i class="layui-icon">&#xe640;</i></span>
+			<span class="layui-col-xs3 share_span" id="cancle_share"></span>
+		</div>
+		<div class="panel-right layui-col-xs12 layui-col-lg6">
+			<form class="layui-form" action="">
+				<div class="searchInput" style="width:30%">
+					<input id="key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+					<i id="d_search_btn" class="layui-icon"></i>
+				</div>
+				<input type="checkbox" name="" title="接口" lay-skin="primary">
+				<select name="ab_state" lay-verify="">
+					<option value="" selected>全部</option>
+					<option value="1">启用</option>
+					<option value="2">禁用</option>
+				</select>
+				<input type="hidden" id="abstatename" value="">
+				<button class="layui-btn layui-btn-normal searching" data-type="reload">搜索</button>
+			</form>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+</div>
+<div class="s-answer">
+	<div class="p_title">
+		<p class="p_title">单轮问答</p>
+		<p class="p_btn">
+			<a href="javascript:void(0)"><button id="addAnswer" class="add_answer layui-btn layui-btn-normal" title="单轮对话" name="添加问答"><i class="layui-icon">&#xe654;</i>添加问答</button></a>
+		</p>
+	</div>
+	<div class="gridBg">
+		<table id="s-answer-grid" lay-filter="demo1"></table>
+		<div id="page1"></div>
+	</div>
+	<script type="text/html" id="switchTpl">
+		<input type="checkbox" name="state" value="{{d.id}}" lay-skin="switch" lay-filter="state1" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+<div class="d-answer">
+	<div class="p_title">
+		<p class="p_title">多轮问答</p>
+		<p class="p_btn">
+			<a href="#/ability/danswer"><button id="addTheme" class="add_answer layui-btn layui-btn-normal" title="多轮对话" name="添加主题"><i class="layui-icon">&#xe654;</i>添加主题</button></a>
+		</p>
+	</div>
+	<div class="gridBg">
+		<table id="d-answer-grid" lay-filter="demo2"></table>
+		<div id="page2"></div>
+	</div>
+	<script type="text/html" id="switchTpl_mul">
+		<input type="checkbox" name="state" value="{{d.id}}" lay-skin="switch" lay-filter="state2" {{ d.state==1 ? 'checked' : '' }}>
+	</script>
+</div>
+<script type="text/javascript" src="res/js/ability/abilityTable.js"></script>

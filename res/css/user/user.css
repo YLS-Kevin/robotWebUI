@@ -1,0 +1,101 @@
+body,html{
+	margin:0px ;
+	padding:0px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	overflow: hidden;
+	position:relative;
+	background-size:cover;
+	width:100%;
+	height:100%;
+}
+div.communicity{
+	margin: auto;  
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;  
+	/*position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-ransform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);*/
+	width:400px;
+	height:600px;
+}
+div.communicity div{
+	position: relative;
+	text-align: center;
+	margin-top:5px
+}
+div.communicity div.r_logo{
+	margin-bottom:40px
+}
+div.r_logo>img{
+	height:52px;
+	width:180px;
+}
+div.communicity div.r_msg{
+	margin-top: 20px;
+}
+div.r_msg>p{
+	font-size:24px;
+	color:#fff
+}
+div.communicity div.r_main{
+	background:#fff;
+	width:100%;
+	height:auto;
+	padding: 20px 40px;
+    box-sizing: border-box;
+    margin-top:40px
+}
+div.r_main>.layui-tab-brief>.layui-tab-title .layui-this{
+	color:rgb(0,132,255);
+	text-align: left;
+	width:52px
+	
+}
+div.r_main>.layui-tab-brief>.layui-tab-title .layui-this:after{
+	border-bottom-color:rgb(0,132,255);
+}
+div.layui-form-item>input{
+	background:rgba(244,244,244);
+	font-size:12px
+}
+
+button.r_btn{
+	background: rgb(0,132,255);
+	width:100%;
+}
+div.communicity div div.r_login{
+	margin:20px 0px 40px
+}
+div.r_login>p{
+	text-align: right;
+}
+div.r_login>p>a{
+	color:#9F9F9F;
+	font-size:14px
+}
+div.codeInput input{
+	background:rgba(244,244,244);
+	font-size:12px;
+}
+div.codeInput>button{
+	width: 37%;
+    background: rgb(0,132,255);
+    position: relative;
+    top: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+.layui-tab-content {
+    padding: 0px;
+}
+div.r_login>p>a.r{
+	color:rgb(0,132,255);
+}

@@ -1,0 +1,44 @@
+html,body{
+	background: url(../../image/user/zc_bj.jpg) no-repeat;
+}
+div.communicity{	
+	margin: auto;  
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;  
+	/*position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-ransform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);*/
+	width:400px;
+	height:600px;
+}
+div.communicity div div.checkbox{
+	text-align: left;
+}
+.layui-form-item .layui-form-checkbox[lay-skin=primary] {
+    display: inline;
+    position: relative;
+    margin-right: 10px;
+}
+.layui-form-checked[lay-skin=primary] i {
+    border-color: rgb(0,132,255);
+    background-color: rgb(0,132,255);
+    color: #fff;
+}
+
+span.agree_span , span.agree_span>a{
+	font-size:12px
+}
+span.agree_span>a{
+	color:rgb(0,132,255);
+}
+::-ms-clear,::-ms-reveal{display:none;}
+span.r{
+	color:rgb(0,132,255);
+}

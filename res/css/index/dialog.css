@@ -1,0 +1,465 @@
+
+
+div.s-title,
+div.order {
+	margin: 10px 0px 10px;
+	width:100%
+}
+
+div.order:after,
+div.vague_list:after,
+div.vague_list1:after {
+	display: block;
+	clear: both;
+	height: 0;
+	content: "";
+	visibility: hidden;
+	overflow: hidden;
+}
+
+
+
+div.orderRight>p>i {
+	font-size: 14px
+}
+
+div.s-title>span {
+	font-size: 18px;
+}
+
+div.s-content {
+	background: #fff;
+	height: auto;
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+	margin: 10px 0px;
+	padding: 20px;
+}
+
+div.s-content ul.layui-tab-title {
+	float: left;
+	border-bottom: 1px solid rgb(204, 230, 255);
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+	border-bottom: 2px solid rgb(0, 132, 255);
+}
+
+div.s-content div.operateMsg {
+	float: right;
+	position: relative;
+	margin-top: 20px;
+}
+
+div.s-content div.operateMsg>a {
+	cursor: pointer;
+	color: rgb(0, 132, 255)
+}
+
+div.vague_list,
+div.vague_list1 {
+	width: 70%;
+}
+
+div.vague_msgs,
+div.vague_answer {
+	margin: 20px
+}
+
+div.vague_msgs input,
+div.vague_answer input {
+	width: 80%;
+	display: inline-block;
+	float: left;
+	margin-bottom: 20px;
+}
+
+div.vague_msgs button,
+div.vague_answer button {
+	margin: 0px;
+    /* top: -2px; */
+    position: relative;
+    left: 10px;
+    float: left;
+    color: #fff;
+    border: none;
+}
+div.vague_msgs button:hover,
+div.vague_answer button :hover,
+button.vague_delete:hover{
+	color:#fff
+}
+div.vague_btn>button {
+	margin-left: 20px
+}
+
+div.vague_btn>button>i {
+	color: #fff
+}
+button.vague_delete>i{
+	color:#fff
+}
+div.footer {
+	margin-bottom: 40px;
+	padding: 20px;
+}
+
+div.footer1 {
+	margin-bottom: 40px;
+	padding: 20px;
+	margin-top: 60px;
+}
+
+div.footer1>div.layui-input-block {
+	width: 70%;
+	margin-left: 0px;
+	margin-top: 20px;
+	margin: 20px 0px;
+}
+
+div.footer1 button {
+	margin-left: 0px
+}
+
+div.footer>p {
+	margin: 20px
+}
+
+div.footer>div.layui-input-block {
+	margin: 0px 0px 20px 20px;
+	width: 70%;
+	display: inline-block;
+}
+
+div.footer>textarea,
+div.footer1>textarea,
+{
+	display: inline-block;
+}
+
+div.mainKeyList {
+	width: 70%;
+	height: 200px;
+}
+
+div.key_msgs,
+div.interfaceAnswer,
+div.footer {
+	width: 90%;
+	border: 1px solid #D2D2D2;
+	margin: 20px
+}
+
+p.keyword {
+	width: 100%;
+	border-bottom: 1px solid #D2D2D2;
+	font-size: 16px;
+	padding: 10px 0px 10px 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+p>i.crashAll {
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	color: red;
+	cursor: pointer;
+}
+
+div.input {
+	width: 40%;
+	position: relative;
+	display: inline-block;
+	margin: 10px 40px
+}
+
+div.input>span {
+	display: inline-block;
+	position: absolute;
+	left: -20px;
+	top: 10px;
+}
+
+div.nearInput {
+	display: none;
+}
+
+div.dropDown {
+	border: 1px solid #dcdcdc;
+	border-top: none;
+	/*height: 200px;*/
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 2px;
+	display: none;
+}
+div.dropDown div.searchInput{
+	width:100%
+}
+div.page{
+	text-align: right;
+    margin-right: 10px;
+}
+div.page .layui-laypage>a:first-child, .layui-laypage>a:first-child em {
+    border-radius: 2px 0 0 2px;
+}
+div.page .layui-laypage a, .layui-laypage span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border:none;
+    cursor: pointer;
+}
+div.layui-laypage>a{
+	border:none;
+	padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+}
+div#InterfacePage{
+	text-align: right;
+}
+div.singleKeyWorld {
+	/*margin:10px;*/
+	padding: 10px;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+}
+
+div.singleKeyWorld i {
+	color: red;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+div.singleKeyWorld i.d_search_btn{
+	color: #666;
+    right: 35px;
+    top: 18px;
+}
+div.drop_list {
+	border: 1px solid #D2D2D2;
+}
+
+div.keyWorldList_btn {
+	margin: 20px
+}
+
+div.keyWorldList_btn i {
+	color: #fff
+}
+
+div.interfaceAnswer {
+	padding: 20px;
+}
+
+div.t0 {
+	border: 1px solid #efefef;
+	border-radius: 5px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	padding: 0 20px;
+	padding-left: 0px;
+}
+
+div.inter {
+	margin-top: 20px;
+	display: none;
+}
+
+div.t2 {
+	display: inline-block;
+	margin: 10px
+}
+
+div.t3 {
+	display: inline-block;
+	top: 15px;
+	position: relative;
+}
+
+div.div_input {
+	width: 320px;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+}
+
+div.div_ul {
+	position: absolute;
+	width: 320px;
+	border: 1px solid #efefef;
+	border-radius: 5px;
+	background-color: #fff;
+	overflow: auto;
+	display: none;
+	z-index: 2
+}
+
+div.div_ul li {
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	margin: 10px 15px;
+	background: rgb(0, 132, 255);
+	padding: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+div.layui-input-block {
+	display: inline-block
+}
+
+div.t4 {
+	top: 15px;
+	display: inline-block;
+}
+
+form.footForm {
+	width: 20%;
+	display: inline-block;
+}
+
+textarea.ta {
+	margin-top: 20px;
+	display: inline-block;
+    width: 90%;
+}
+
+
+/*div.nearInput{
+	top: 14px;
+}*/
+
+div.footer div.layui-input-block {
+	margin-left: 20px
+}
+
+div.div_input div.tagsinput {
+	position: relative;
+	top: 13px;
+}
+
+div.script_t0 {
+	border: none
+}
+
+.layui-nav {
+	background-color: rgb(246, 246, 246);
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+	background-color: rgb(0, 132, 255);
+}
+
+div#sharePage .layui-laypage a,
+.layui-laypage button,
+.layui-laypage input,
+.layui-laypage select,
+.layui-laypage span {
+	border: none
+}
+
+div.answerInter {
+	margin-left: 0px;
+	width: 100%
+}
+
+input#key {
+	width: 90%;
+	margin: 10px auto;
+}
+
+ul.ullist {
+	list-style: none;
+}
+
+ul.ullist:after {
+	content: ".";
+	clear: both;
+	display: block;
+	overflow: hidden;
+	font-size: 0;
+	height: 0;
+}
+
+ul.ullist>li {
+	float: left;
+	/*width: 15%;*/
+	margin: 5px 5%;
+	cursor: pointer;
+	background:rgb(0, 132, 255);
+	padding:5px 10px;
+	border-radius:2px;
+	color:#fff;
+	
+}
+div.searchDiv {
+	width: 31%;
+    bordeR: 1px solid #ededed;
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    display: none;
+    overflow: auto;
+}
+div.searchDiv>i{
+	position:absolute;
+	right: 20px;
+    top: 20px;
+}
+
+div.layui-input-block {
+	margin-left: 0px;
+	width: 100%;
+	padding: 0px;
+}
+
+div.searchDiv>ul>li {
+	font-size: 16px;
+	padding: 8px;
+	cursor: pointer
+}
+
+div.ilert_List {
+	margin-bottom: 10px;
+}
+
+div.searchSelect{
+	width: 31%
+}
+
+div.nearInput .bootstrap-tagsinput,
+div.nearInput1 .bootstrap-tagsinput {
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	box-shadow: none;
+	display: inline-block;
+	padding: 6px 6px;
+	color: #555;
+	vertical-align: middle;
+	border-radius: 2px;
+	max-width: 100%;
+	line-height: 22px;
+	cursor: text;
+	width: 100%;
+	min-height: 38px;
+	box-sizing: border-box;
+}
+
+div.footer label.layui-form-label {
+	width: auto
+}

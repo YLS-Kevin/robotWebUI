@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="./res/css/word/index.css">
+<div class="layui-fluid">
+	<div class="robotManager">
+		<div class="m">
+			<p class="m_title m_name">我的动态词</p>
+			<p class="m_search">
+				<input id="key" type="text" name="name" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+				<i class="layui-icon" id="searchBtn" data-type="getInfo">&#xe615;</i>
+			</p>
+		</div>
+		<div class="m_bg">
+			<p class='p_title'>动态词类别</p>
+			<p class="p_right"><a href="https://www.kancloud.cn/yuanls/dialog/687561" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+			<p style="clear:both"></p>
+			<input id="getName" type="hidden" name_ch="" name_en="">
+			<div class="wordType">
+				<ul>
+				</ul>
+			</div>
+			<div class="addDiv">
+				<button class="layui-btn layui-btn-normal addBtn" name="新增"><i class="layui-icon">&#xe654;</i>添加</button>
+			</div>
+			
+			<div id="sharePage"></div>  <!--分页-->
+		</div>
+	</div>
+</div>
+<!--添加动态词类型-->
+<div id="formType"  style="display: none;">
+	<div class="layui-form-item">
+		<label class="layui-form-label">中文名：</label>
+		<div class="layui-input-block">
+			<input type="text" name="ch" lay-verify="required|name_ch" placeholder="长度为1-10个字符" autocomplete="off" class="layui-input ch_name">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<label class="layui-form-label">英文名：</label>
+		<div class="layui-input-block">
+			<input type="text" name="en" lay-verify="required|name_en" placeholder="请输入英文名字" autocomplete="off" class="layui-input en_name">
+		</div>
+	</div>
+	<!--<div class="bts">
+		<button class="layui-btn layui-btn-primary cancleBtn">取消</button>
+		<button class="layui-btn layui-btn-normal submitBtn" type="button">确认</button>
+	</div>-->
+</div>
+
+<!--添加动态词-->
+<form id="wordType" class="layui-form" style="display: none;">
+	<div class="layui-form-item">
+		<label class="layui-form-label">名词：</label>
+		<div class="layui-input-block">
+			<input type="text" name="noun" lay-verify="required|noun" placeholder="长度为1-10个字符" autocomplete="off" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<label class="layui-form-label">词频：</label>
+		<div class="layui-input-block">
+			<input type="number" name="count" lay-verify="required|count" placeholder="请输入数字" autocomplete="off" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">状态：</label>
+		<div class="layui-input-block">
+			<input checked="" name="state" lay-skin="switch" lay-filter="switchTest" lay-text="启用|禁用" type="checkbox">
+		</div>
+	</div>
+	<div class="layui-form-item layui-form-text">
+		<label class="layui-form-label">备注：</label>
+		<div class="layui-input-block">
+			<textarea placeholder="请输入内容" name="note" lay-verify="required|note" class="layui-textarea"></textarea>
+		</div>
+	</div>
+</form>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/word/index.js"></script>

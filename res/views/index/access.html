@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="./res/css/index/access.css">
+<div class="layui-fluid">
+	<div class="addRobot">
+		<div class="order">
+			<div class="orderLeft">
+				<span class="t1"><a href="javascript:void(0)"></a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t2"><a href="javascript:void(0)">开发接入</a></span>
+			</div>
+			<div class="orderRight">
+				<p><a href="https://www.kancloud.cn/yuanls/dialog/687548" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a></p>
+			</div>
+		</div>
+		<p class="add_title">开发接入</p>
+		<div class="a_main">
+			<!--信息-->
+			<div class="a_div a_information">
+				<p class="title">信息</p>
+				<div class="a_msg">
+					<form class="layui-form" action="">
+						<input type="hidden" keyId="" id="getKey">
+						<div class="layui-form-item">
+							<label class="layui-form-label">机器人名：</label>
+							<div class="layui-input-block">
+								<input name="name"  autocomplete="off" class="layui-input a_name" type="text" value="" disabled="" placeholder="长度为1-30个字符">
+							    <span class="a_modify">修改</span>
+							</div>
+						</div>
+						<div class="layui-form-item hangye">
+							<label class="layui-form-label">所属行业：</label>
+							<div class="layui-input-block">
+								<select id="industry" name="industry" lay-verify="required" class="a_name" disabled="" lay-filter="level">
+								</select>
+								<span class="a_modify" name="select">修改</span>
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">功能描述：</label>
+							<div class="layui-input-block">
+								<textarea placeholder="请简述使用场景、应用特点等信息，不超过1000个字符" class="layui-textarea a_name" disabled=""></textarea>
+							    <span class="a_modify">修改</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--参数-->
+				<div class="a_div a_parameter">
+					<p class="title">参数</p>
+					<div class="a_msg">
+						<p><span class="a_t">APPID：</span><span class="a_name appid"></span></p>
+						<p><span class="a_t">ApiKey：</span><input type="text" value="" class="a_name1" id="api_text" readonly=""><input type="hidden" id="showKey"><span class="a_copy copyKeyBtn">复制</span><span class="a_reset">重置</span></p>
+						<p><span class="a_t">ModuleID：</span><input type="text" value="" class="a_name1" id="module_text" readonly=""><input type="hidden" id="showModule"><span class="a_copy copyModuleBtn">复制</span><span class="a_reset">重置</span></p>
+						<p><span class="a_t">IdAc：</span><input type="text" value="" class="a_name1" id="idac_text" readonly=""><input type="hidden" id="showIdAc"><span class="a_copy copyIdAcBtn">复制</span><span class="a_reset">重置</span></p>
+					</div>
+				</div>
+				<!--接入方式-->
+				<div class="a_div a_type">
+					<p class="title">接入方式</p>
+					<div class="a_msg">
+						<form class="layui-form" action="">
+							<div class="layui-form-item access_way">
+								<select id="type" name="type" lay-filter="accessType" class="layui-select-inline">
+									<option value="0" selected="">WEBAPI</option>
+									<option value="1">Android</option>
+								</select>
+								<input type="hidden" id="accessname" value="">
+							</div>
+						</form>
+					</div>
+				</div>
+				<!--Android接入-->
+				<div class="a_div a_android">
+					<p class="title">Android接入</p>
+					<div class="a_msg">
+						<ul>
+							<li>
+								<a href="https://www.kancloud.cn/yuanls/v1/688385" target="_blank">接入说明</a>
+							</li>
+							<li>
+								<a href="">示例代码</a>
+							</li>
+							<li>
+								<a href="" target="_blank">SDK下载</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--IOS接入-->
+				<div class="a_div a_ios">
+					<p class="title">IOS接入</p>
+					<div class="a_msg">
+						<ul>
+							<li>
+								<a href="javascript:void(0)">接入说明</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">示例代码</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">SDK下载</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--WEBAPI接入-->
+				<div class="a_div a_webapi">
+					<p class="title">WEBAPI接入</p>
+					<div class="a_msg">
+						<ul>
+							<li>
+								<a href="https://www.kancloud.cn/yuanls/web_api/688371" target="_blank">接入说明</a>
+							</li>
+							<li>
+								<a href="https://www.kancloud.cn/yuanls/web_api/688373" target="_blank">示例代码</a>
+							</li>
+							<!--<li>
+								<a href="javascript:void(0)">调试</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Github</a>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="res/js/init.js"></script>
+	<script type="text/javascript" src="res/js/index/access.js"></script>

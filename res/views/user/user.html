@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="./res/css/user/index.css">
+<div class="layui-fluid">
+	<div class="user">
+		<div class="order">
+			<p>账户信息管理</p>
+		</div>
+		<div class="userform">
+			
+				<div class="accountDiv">
+					<p class="title">账号信息</p>
+					<div class="layui-form-item">
+						<label class="layui-form-label">账号邮箱</label>
+						<div class="layui-input-block">
+							<input type="text" name="accountemail" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="" disabled="">
+							<a href="javascript:void(0)">完善</a>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">账户名称</label>
+						<div class="layui-input-block">
+							<input type="text" name="name" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="" disabled>
+							<a href="javascript:void(0)" class="editName">修改</a>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">账号Id</label>
+						<div class="layui-input-block">
+							<input type="text" name="id" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="1" readonly>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">密码</label>
+						<div class="layui-input-block">
+							<input type="password" name="pwd" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" disabled value="">
+							<a href="javascript:void(0)" class="editPwd">修改密码</a>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">会员等级</label>
+						<div class="layui-input-block" style="width:31%">
+							<!--<input type="text" name="name" lay-verify="required|name" autocomplete="off" class="layui-input inter_name">-->
+							<span class="level">高级会员</span>
+							<span class="day">剩余50天</span>
+							<a href="javascript:void(0)" class="up">升级</a>
+						</div>
+						
+					</div>
+				</div>
+
+				<div class="safeSetting">
+					<p class="title">安全设置</p>
+					<div class="layui-form-item">
+						<label class="layui-form-label">密码设置</label>
+						<div class="layui-input-block">
+							<input type="text" name="setting" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="" disabled="">
+							<a href="javascript:void(0)" style="display:none">修改</a>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">手机</label>
+						<div class="layui-input-block">
+							<input type="text" name="tel" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="" disabled="">
+							<a href="javascript:void(0)" style="display:none">修改</a>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">邮箱</label>
+						<div class="layui-input-block">
+							<input type="text" name="email" lay-verify="required|name" autocomplete="off" class="layui-input inter_name" value="" disabled="">
+							<a href="javascript:void(0)" style="display:none">修改</a>
+						</div>
+					</div>
+				</div>
+                <div class="trueDiv" style="display: none;">
+                	<p class="title">实名认证</p>
+                	<div class="">
+                		
+                	</div>
+                </div>
+		</div>
+	</div>
+</div>
+<!--修改密码-->
+<div id="modifyPwd" style="display: none;">
+	<input type="text" style="display:none"  id="modifyMsg">
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<input type="password" name="newpwd1" lay-verify="required|model" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<div class="layui-input-block">
+			<input name="newpwd2" autocomplete="off" class="layui-input" type="password" placeholder="请再输入一次新密码">
+		</div>
+	</div>
+</div>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/user/user.js"></script>

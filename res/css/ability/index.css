@@ -1,0 +1,193 @@
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(0,132,255);
+}
+div.leftContent , div.leftContent ul.layui-nav{
+	margin-top: 2px;
+}
+ul.ulOrder>li>a{
+	font-weight: bold;
+}
+div.panel{
+	background:#fff;
+	/*height:120px;*/
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+	margin:60px 40px 40px;
+	position:relative
+}
+p.panel-title{
+	font-size: 18px;
+    font-weight: 600;
+    position: relative;
+   /* left: 150px;
+    top: 10px;*/
+}
+div.touDiv{
+	position: absolute;
+    background-color: #fff;
+    border: 1px solid #fff;
+    height: 80px;
+    width: 80px;
+    top: 10px;
+    left: 60px;
+    padding: 5px;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(197, 197, 197, 0.5);
+}
+img.headerImg{	
+	height:100%;
+	width:100%;	
+	position:relative
+}
+div.panel-top{
+	border-bottom: 1px solid #dcdcdc;
+    /* height: 60%; */
+    position: relative;
+    padding: 10px 0px 20px 130px;
+}
+
+div.panel-bottom{
+	padding: 5px 0px;
+    position: relative;
+}
+div.panel-bottom>div.panel-left{
+	height:100%;
+	/*float:left;*/
+}
+div.panel-bottom>div.panel-left>span{
+	display: inline-block;
+    position: relative;
+    /*width: 100px;*/
+    text-align: center;
+    line-height: 2.5;
+    margin: 5px 0px;
+    border-right: 1px solid #e4e3e3;
+        width: 22%;
+}
+div.panel-right{
+	/*float:right;
+	width: 40%;*/
+	margin-top: 3px;
+	text-align: center;
+}
+div.panel-right>form.layui-form input[name='msg']{
+	display: inline-block;
+}
+div.panel-right div.layui-form-select{
+	display: inline-block;
+	width: 20%;
+    margin-left: 5%;
+    margin-right:10%
+}
+div.panel-left i.layui-icon{
+	font-size:15px
+}
+div.layerInput>input{
+	width:50%;
+	position:relative;
+	text-align: center;
+	margin:10% auto
+}
+div.layerBtns{
+	width:100%;
+	margin:5% auto;
+	position:relative;
+	text-align: center;
+}
+span.share{
+	color:rgb(30,191,8)
+}
+span.share>span{
+	background-color:rgb(30,191,8)
+}
+div.panel-right>button.searching{
+	width:50%
+}
+div.searchInput{
+	display: inline-block;
+    width: 100%;
+	position:relative;
+	margin-right: 5%;
+}
+div.searchInput>i{
+	position:absolute;
+	top:8px;
+	right:10px;
+}
+span.delete-span, span.share_span{
+	cursor:pointer;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(0,132,255);
+    color: #fff;
+}
+.layui-form-onswitch {
+    border-color: rgb(0,132,255);
+    background-color: rgb(0,132,255);
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: rgb(0,132,255);
+}
+li.active{
+	background-color: rgb(0,132,255);
+}
+.layui-nav {
+	background-color: rgb(246,246,246);
+}
+div#sharePage .layui-laypage a, .layui-laypage button, .layui-laypage input, .layui-laypage select, .layui-laypage span{
+    border:none
+}
+div#page1 , div#page2{
+	text-align: right;
+}
+div#sharePage0 ,div#sharePage1{
+	position:relative;
+	margin-top:30px
+}
+div#sharePage0 .layui-laypage a, div#sharePage0 .layui-laypage span ,div#sharePage1 .layui-laypage a,div#sharePage1 .layui-laypage span{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 6px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border: none;
+}
+form input[name=ab]{
+    width: 98%;
+    text-align: left;
+    position: relative;
+    margin: 10px auto;
+}
+i#s_ability{
+	position: absolute;
+    right: 10px;
+    top: 10px;
+}
+div.ability form.layui-form{
+	position:relative;
+}
+.layui-table-view table.layui-table{
+    width:100%
+}
+div.layui-table-cell{
+	height:auto
+}
+div.layui-table-cell>p.dot{
+	height:auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+div.layui-table-cell>p.normal{
+	height:auto;
+    /*overflow: hidden;
+    text-overflow: ellipsis;*/
+    white-space: normal;
+    cursor: pointer;
+}

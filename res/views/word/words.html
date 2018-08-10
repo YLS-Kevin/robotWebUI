@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./res/css/word/table.css">
+<div class="layui-fluid">
+	<div class="robotManager">
+		<div class="m m_wordbank">
+			<p class="m_title"><a href="#/word">我的词库</a><a>&nbsp;/&nbsp;</a><span class="m_name"></span></p>
+			<p class="m_search">
+				<input id="w" type="text" name="name" placeholder="请输入动态词或者同义词" autocomplete="off" class="layui-input">
+				<i class="layui-icon" id="searchBtn" data-type="getInfo">&#xe615;</i>
+			</p>
+			<p class="wordbank_curr" style="display: none;">1</p>
+		</div>
+		<div class="m_bg">
+			<div class="addDiv" style="display: none;">
+				<a href="#/word/add"><button class="layui-btn layui-btn-normal addBtn" name="新增"><i class="layui-icon">&#xe654;</i>新增</button></a>
+			</div>
+			<table id="interface" lay-filter="interfaceDemo"></table>
+			<div id="laypage"></div>
+		</div>
+	</div>
+</div>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/word/words.js"></script>

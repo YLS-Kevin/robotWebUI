@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="./res/css/word/add.css">
+<div class="layui-fluid">
+	<div class="addInterface">
+		<div class="order">
+			<div class="orderLeft">
+				<span class="t1"><a href="#/word">我的词库</a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t2"><a href="#/word/words"></a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t33"><a href="#/word/words"></a></span>
+				<span class="t">&nbsp;/&nbsp;</span>
+				<span class="t4"><a href="javascript:void(0)">修改</a></span>
+			</div>
+			<div class="orderRight">
+				<p>
+					<a href="https://www.kancloud.cn/yuanls/dialog/687566" target="_blank"><img src="./res/image/link.png">对话平台使用手册</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="addForm">
+			<form id="wordType" class="layui-form">
+				<div class="layui-form-item">
+					<label class="layui-form-label">动态词：</label>
+					<div class="layui-input-block">
+						<input type="text" name="noun" placeholder="长度为1-30个字符" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item nearWord">
+					<label class="layui-form-label">同义词：</label>
+					<div class="layui-input-block nearinput">
+						
+					</div>
+				</div>
+				<div class="layui-form-item layui-col-xs12">
+					<label class="layui-form-label">词频：</label>
+					<div class="layui-input-block">
+						<input type="number" name="count"  placeholder="请输入数字" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">状态：</label>
+					<div class="layui-input-block">
+						<input checked="" name="state" lay-skin="switch" lay-text="启用|禁用" type="checkbox">
+					</div>
+				</div>
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label">备注：</label>
+					<div class="layui-input-block">
+						<textarea placeholder="请输入内容" name="note"  class="layui-textarea"></textarea>
+					</div>
+				</div>
+				<div class="bts">
+					<button type="button" class="layui-btn layui-btn-normal submitBtn" lay-filter="demo" lay-submit>确认</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="res/js/word/edit.js"></script>

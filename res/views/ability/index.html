@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="./res/css/ability/index.css">
+<!--左边栏-->
+<div class="abilityInfos" style="display: none;"></div>
+<div class="ability">
+	<div class="layui-side layui-side-menu">
+		<img id="closeBtn" style="position:fixed;left:200px;cursor:pointer" src="./res/image/ability/close.png">
+		<div class="">
+			<div class="layui-tab layui-tab-brief" lay-filter="demo">
+				<ul class="ulOrder layui-tab-title">
+					<li class="layui-nav-item layui-this" share="0">
+						<a href="javascript:void(0)">待共享</a>
+					</li>
+					<li class="layui-nav-item" share="1">
+						<a href="javascript:void(0)">已共享</a>
+					</li>
+				</ul>
+				<form class="layui-form" action="">
+					<input type="text" name="ab" placeholder="请输入新能力" autocomplete="off" class="layui-input t_name">
+					<i id="s_ability" class="layui-icon">&#xe615;</i>
+				</form>
+				<div class="layui-tab-content leftContent">
+					<div class="layui-tab-item layui-show" id="shareDiv">
+						<!--待共享展示的内容-->
+						<ul id="l_list_share" class="l_list layui-nav">
+						</ul>
+						<div class="addBtnDiv">
+							<button class="leftContentBtn layui-btn" id="addNewAbility_share"><i class="layui-icon">&#xe654;</i>添加新能力</button>
+						</div>
+						<div id="sharePage0"></div>
+					</div>
+					<div class="layui-tab-item" id="sharedDiv">
+						<!--已共享展示的内容-->
+						<ul id="l_list_shared" class="l_list layui-nav">
+						</ul>
+						<div id="sharePage1"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--右边内容展示-->
+	<div class="layui-body ysl_main">
+		
+	</div>
+</div>
+<script src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/ability/index.js"></script>

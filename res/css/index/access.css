@@ -1,0 +1,152 @@
+p.add_title{
+	position:relative;
+	margin:10px auto 20px;
+	width:97%;
+	font-size:18px
+}
+div.order{
+	position:relative;
+	margin:20px auto;
+	width:97%;
+}
+div.a_main{
+	position:relative;
+	margin:20px auto;
+	width:97%;
+	background:#fff;
+	box-shadow: 2px 2px 10px 1px #ece9e9;
+	padding:40px ;
+	box-sizing: border-box;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(0,132,255);
+    color: #fff;
+}
+.layui-btn {
+    background-color:rgb(0,132,255);
+}
+div.a_div{
+	position:relative;
+	margin-top:40px
+}
+div.a_main>div.a_information{
+	margin-top:0px
+}
+div.a_div>p.title{
+	font-size:18px
+}
+div.a_msg{
+	margin:20px 0px
+}
+div.a_msg>p{
+	margin-bottom:15px;
+	width:50%
+}
+div.a_msg>p>span{
+	margin-top: 0px;
+}
+div.a_msg>p>span.a_t{
+	width: 100px;
+	text-align: left;
+}
+div.a_msg>p>span{
+	display: inline-block;
+}
+span.a_t{
+	margin-right:20px
+}
+span.a_name{
+	font-weight: bold;
+	width:80%;
+}
+input.a_name , textarea.a_name ,.layui-disabled{
+	font-weight: bold;
+	width:90%;
+	border:none;
+	background: #fff;
+	display: inline-block;
+}
+.layui-disabled{
+	color:#666!important;
+    cursor:default!important;
+}
+div.a_msg div.layui-select-disabled i{
+	display: none;
+}
+input.a_name1{
+	font-weight: bold;
+	border:none;
+	background: #fff;
+	display: inline-block;
+	width: 75%;
+}
+textarea.a_name{
+	resize: none;
+}
+.layui-form-select .layui-input{
+	font-weight: bold;
+}
+div.layui-form-select{
+	width:90%;
+	display: inline-block;
+}
+span.a_modify , span.a_copy, span.a_reset{
+	color:rgb(0,132,255);
+	float:right;
+	cursor:pointer;
+	margin-left: 20px;
+	margin-top:10px
+}
+div.a_msg>p>span.a_reset{
+	display: none;
+}
+div.a_msg form{
+	width:50%
+}
+div.a_msg form>div{
+	width:100%
+}
+div.a_msg>ul{
+	list-style: none;
+}
+div.a_msg>ul:after{
+	display: block;
+    clear:both;
+    height:0;
+    content: "";
+    visibility: hidden;
+    overflow:hidden;
+}
+div.a_msg>ul>li{
+	float:left;
+	display: inline-block;
+	width:100px;
+	border:1px solid rgb(0,132,255);
+	text-align: center;
+	padding:5px;
+	box-sizing: border-box;
+	margin-right:40px;
+	margin-top:10px
+}
+div.a_msg>ul>li>a{
+	color:rgb(0,132,255)
+}
+div.a_ios{
+	display: none
+}
+.layui-form-label{
+	text-align: left;
+	padding:9px 0px
+}
+/*div.layui-input-block{
+	width:60%
+}*/
+div.a_type div.layui-form-select{
+	width:50%
+}
+div.layui-input-block>.modify_edit{
+	border:1px solid #e6e6e6;	
+}
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table[lay-even] tr:nth-child(even) {{
+	background-color: rgb(243,249,255);
+}

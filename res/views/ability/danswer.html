@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="./res/css/ability/danswer.css">
+<div>
+	<div class="themeInfos" style="display: none;"></div>
+	<!--左边栏-->
+	<div class="layui-side layui-side-menu">
+		<img id="closeBtn" style="position:fixed;left:200px; cursor:pointer" src="./res/image/ability/close.png">
+		<div class="d_left">
+			<div class="layui-tab layui-tab-brief">
+				<form class="layui-form" action="">
+					<input type="text" name="msg" placeholder="请输入主题" autocomplete="off" class="layui-input t_name">
+					<i id="d_search_btn" class="layui-icon">&#xe615;</i>
+				</form>
+				<div class="layui-tab-item layui-show leftContent">
+					<!--待共享展示的内容-->
+					<ul class="l_list layui-nav" id="themeList">
+					</ul>
+					<div class="addBtnDiv">
+						<button class="leftContentBtn layui-btn" id="addTheme"><i class="layui-icon">&#xe654;</i>添加主题</button>
+					</div>
+					<!--分页设置-->
+					<div id="ThemePage"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--右边内容展示-->
+	<div class="layui-body" id="duolun_main">
+		
+	</div>
+</div>
+<script type="text/javascript" src="res/js/init.js"></script>
+<script type="text/javascript" src="res/js/ability/danswer.js"></script>

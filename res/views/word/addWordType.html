@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="../../../layui/css/layui.css">
+<link rel="stylesheet" href="../../css/style.css">
+<style>
+div.layui-form{
+	margin:20px
+}	
+.layui-form-label {
+    width:auto;
+    text-align: left;
+}
+.layui-input-block {
+    margin-left: 90px;
+    min-height: 36px;
+    padding-right: 15px;
+}
+div.bts{
+	text-align: right;
+	padding-right: 15px;
+	margin-top: 80px;
+}
+div.bts>button.layui-btn-normal{
+	background-color:rgb(0,132,255);
+}
+</style>
+<form class="layui-form" action="">
+	<div class="layui-form-item">
+		<label class="layui-form-label">中文名：</label>
+		<div class="layui-input-block">
+			<input type="text" name="name_ch" lay-verify="required|name_ch" placeholder="长度为1-10个字符" autocomplete="off" class="layui-input ch_name">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<label class="layui-form-label">英文名：</label>
+		<div class="layui-input-block">
+			<input type="text" name="name_en" lay-verify="required|name_en" placeholder="请输入英文名字" autocomplete="off" class="layui-input en_name">
+		</div>
+	</div>
+	<div class="bts">
+		<button class="layui-btn layui-btn-primary cancleBtn">取消</button>
+		<button class="layui-btn layui-btn-normal submitBtn" lay-filter="demo" lay-submit="">确认</button>
+	</div>
+</form>
+<script type="text/javascript" src="../../common/jquery-3.3.1.min.js"></script>
+<script src="../../../layui/layui.js"></script>
+<script src="../../js/init.js"></script>
+<script>
+	layui.use('form', function() {
+		var form = layui.form;
+		form.render();
+		form.verify({
+			name_ch: function(value, item) { //value：表单的值、item：表单的DOM对象
+				if(!(/[\u4e00-\u9fa5]/g).test(value)) {
+					return '请输入正确汉字';
+				}
+				if(value.length>10){
+					return '长度必须为1-10个字符'
+				}
+			},
+			name_en: function(value, item) {
+				if(!(/^[a-zA-Z]+$/).test(value)) {
+					return '请输入正确的英文名字';
+				}
+			}
+		});
+		//监听提交  
+		form.on('submit(demo)', function(e) {
+			var index = parent.layer.getFrameIndex(window.name);
+		    parent.$("input#getName").attr("name_ch", $("input.ch_name").val());
+		    parent.$("input#getName").attr("name_en", $("input.en_name").val());
+		    parent.$("input#getName").val(0);
+		    parent.layer.close(index);
+		});
+	})
+	$("button.cancleBtn").bind("click",function(){
+		var index = parent.layer.getFrameIndex(window.name);
+		parent.$("input#getName").val(1);
+		parent.layer.close(index);
+	})
+</script>

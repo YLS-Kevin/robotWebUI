@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="./res/css/index/newAbility.css">
+<!--通用-->
+
+<div class="orderInfo">
+	<p class="order_title"></p>
+</div>
+<div class="changeDiv">
+	<div class="content_normal">
+		<div class="answerDiv">
+			<div class="layui-form-item">
+				<label class="layui-form-label">行业接口异常返回的回答：</label>
+				<div class="layui-input-block">
+					<input name="catch" autocomplete="off" class="layui-input input input1" type="text" disabled stype="2">
+					<a href="javascript:void(0)" class="xiugai editBtn">修改</a>
+				</div>
+				<label class="layui-form-label">找不到对话返回的回答：</label>
+				<div class="layui-input-block">
+					<input name="none" autocomplete="off" class="layui-input input input2" type="text" disabled stype="1">
+					<a href="javascript:void(0)" class="xiugai modify">修改</a>
+				</div>
+			</div>
+		</div>
+		<div class="iconDiv">
+			<div class="layui-upload">
+				<button type="button" class="layui-btn" id="test2">设置机器人图标</button>
+				<div class="layui-upload-list showImg" id="demo2"></div>
+			</div>
+		</div>
+		<div class="abilityDiv">
+			<button type="button" class="layui-btn">能力管理</button>
+			<p class="info">说明：此处的对话库可应用到所有页面</p>
+			<input type="hidden" id="getA_List">
+			<div class="abilityList">
+				<ul>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dialog_content">
+	<div class="orderInfo">
+		<p>自定义对话</p>
+	</div>
+	<div class="dialog">
+		<div class="layui-tab layui-tab-brief" lay-filter="dialogBrief">
+			<ul class="layui-tab-title">
+				<li class="layui-nav-item layui-this" aptype="1">
+					<a href="javascript:void(0)" class="mohumatch">单轮问答</a>
+				</li>
+			</ul>
+			<div class="panel-right layui-col-xs12 layui-col-lg6">
+				<div class="">
+					<form class="layui-form" action="">
+						<div class="searchInput layui-input-inline">
+							<input id="s_key" type="text" name="msg" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+							<i id="d_search_btn" class="layui-icon"></i>
+						</div>
+						<input id="1" type="checkbox" name="" title="接口" lay-skin="primary">
+						<select name="state" lay-verify="" class="layui-select-inline">
+							<option value="" selected>全部</option>
+							<option value="1">启用</option>
+							<option value="2">禁用</option>
+						</select>
+						<input type="hidden" id="typename" value="">
+						<button type="button" class="layui-btn layui-btn-normal searching" data-type="reload">搜索</button>
+					</form>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<div class="layui-tab-content">
+				<div class="add_answer_div">
+					<a href="javascript:void(0)"><button id="addAnswer" class="add_answer layui-btn layui-btn-normal" title="单轮对话" name="添加问答"><i class="layui-icon">&#xe654;</i>添加问答</button></a>
+				</div>
+
+				<div class="layui-tab-item layui-show">
+					<table id="s-answer-grid" lay-filter="demo1"></table>
+					<div id="page1"></div>
+				</div>
+				<script type="text/html" id="switchTpl">
+					<input type="checkbox" name="state" value="{{d.id}}" lay-skin="switch" lay-filter="state1" {{ d.state==1 ? 'checked' : '' }}>
+				</script>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="abilitys" style="display: none;" id="show_ability">
+	<input type="text" id="sid" style="display:none">
+	<div class="searchInput1 layui-input-inline">
+		<input id="ab_key" type="text" name="msg" placeholder="请输入要查询的技能，如：天气" autocomplete="off" class="layui-input">
+		<i id="d_search_btn" class="layui-icon"></i>
+	</div>
+	<div style="clear: both;"></div>
+	<div class="allAbility">
+		<div class="shared">
+			<p class="a_t">●&nbsp;已共享</p>
+			<ul>
+
+			</ul>
+		</div>
+        <div class="share">
+			<p class="a_t">●&nbsp;未共享</p>
+			<ul>
+
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="res/js/index/common.js"></script>
+<script type="text/javascript" src="res/js/index/loadTable.js"></script>

@@ -1,0 +1,37 @@
+<table id="user-list" lay-filter="test"></table>
+
+<script id="tool-bar" type="text/html">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+
+    <!-- 这里同样支持 laytpl 语法，如： -->
+    {{#  if(d.status == 0){ }}
+    <a class="layui-btn layui-btn-mini" lay-event="check">解封</a>
+    {{#  } }}
+</script>
+
+<script>
+    layui.use(['table', 'setting'], function () {
+        var table = layui.table
+            , setting = layui.setting;
+
+        table.render({
+            elem: '#user-list'
+            , url: setting.api_url + '/admin/user/index' //数据接口
+            , page: true //开启分页
+            , limit: 15
+            , limits: [15, 25, 50, 100]
+            , cols: [[ //表头
+                {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
+                , {field: 'email', title: '邮箱'}
+                , {field: 'nickname', title: '昵称'}
+                , {field: 'gender', title: '性别'}
+                , {field: 'status', title: '状态'}
+                , {field: 'sign', title: '签名'}
+                , {field: 'create_time', title: '注册时间'}
+                , {title: '操作', fixed: 'right', width:150, align:'center', toolbar: '#tool-bar'}
+            ]]
+        });
+    });
+</script>

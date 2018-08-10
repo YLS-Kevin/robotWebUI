@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="../../../layui/css/layui.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.css">
+
+<style>
+	form.layui-form {
+		margin: 20px
+	}
+	
+	.layui-form-label {
+		width: auto;
+		text-align: left;
+	}
+	
+	.layui-input-block {
+		margin-left: 90px;
+		min-height: 36px;
+		padding-right: 15px;
+	}
+	
+	.layui-input-block input {
+		width: 80%
+	}
+	
+	div.bts {
+		text-align: right;
+		padding-right: 15px;
+		margin-top: 80px;
+	}
+	
+	div.bts>button.layui-btn-normal {
+		background-color: rgb(0, 132, 255);
+	}
+	
+	.bootstrap-tagsinput {
+		background-color: #fff;
+		border: 1px solid #eaeaea;
+		box-shadow: none;
+		display: inline-block;
+		padding: 4px 6px;
+		color: #555;
+		vertical-align: middle;
+		border-radius: 2px;
+		max-width: 100%;
+		line-height: 28px;
+		cursor: text;
+		margin-left: 14px;
+		width: 80%;
+	}
+</style>
+<form class="layui-form" action="">
+	<input type="text" style="display:none"  id="modifyMsg">
+	<div class="layui-form-item">
+		<label class="layui-form-label">情景模块名称：</label>
+		<div class="layui-input-block">
+			<input type="text" name="model" lay-verify="required|model" placeholder="请输入模块名称" autocomplete="off" class="layui-input ch_name">
+		</div>
+	</div>
+	<div class="layui-form-item layui-col-xs12">
+		<label class="layui-form-label">触发关键字：</label>
+		<div class="layui-input-block">
+			<input style="margin-left: 38px;" type="text" name="key" lay-verify="required|key" placeholder="请输入关键字" autocomplete="off" class="layui-input en_name" data-role="tagsinput">
+		</div>
+	</div>
+	<div class="bts">
+		<button class="layui-btn layui-btn-primary cancleBtn">取消</button>
+		<button class="layui-btn layui-btn-normal submitBtn" lay-filter="demo" lay-submit="">确认</button>
+	</div>
+</form>
+<script type="text/javascript" src="../../common/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../../../layui/layui.js"></script>
+<script src="../../js/init.js"></script>
+<script type="text/javascript" src="../../../res/common/bootstrap-tagsinput-master/bootstrap-tagsinput-master/dist/bootstrap-tagsinput.js"></script>
+<script>
+	initInputtags();
+	layui.use('form', function() {
+		var form = layui.form;
+		form.render();
+		form.verify({
+			model: function(value, item) { //value：表单的值、item：表单的DOM对象
+				/*if(!(/[\u4e00-\u9fa5]/g).test(value)) {
+					return '请输入正确汉字';
+				}
+				if(value.length > 10) {
+					return '长度必须为1-10个字符'
+				}*/
+			},
+			key: function(value, item) {
+				/*if(!(/^[a-zA-Z]+$/).test(value)) {
+					return '请输入正确的英文名字';
+				}*/
+			}
+		});
+		//监听提交  
+		form.on('submit(demo)', function(e) {
+			var index = parent.layer.getFrameIndex(window.name);
+			parent.$("input#getName").attr("mname", $("input.ch_name").val());
+			parent.$("input#getName").attr("key", $("input.en_name").attr("near"));
+			parent.$("input#getName").val(0);
+			parent.layer.close(index);
+		});
+	})
+	$("button.cancleBtn").bind("click", function() {
+		var index = parent.layer.getFrameIndex(window.name);
+		parent.$("input#getName").val(1);
+		parent.layer.close(index);
+	})
+	//初始化inputtags
+	function initInputtags() {
+		$('input').on('itemAdded', function(event) {
+			var a = $(this).val().replace(/,/g, '|');
+			$(this).attr("near", a)
+			//alert(a)
+			// event.item: contains the item
+		});
+		$('input').on('itemRemoved', function(event) {
+			var a = $(this).val().replace(/,/g, '|');
+			$(this).attr("near", a)
+			//alert(a)
+			// event.item: contains the item
+		});
+	}
+</script>
